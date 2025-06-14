@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LevelController">
+    <AnchorPane prefHeight="801.0" prefWidth="873.0" style="-fx-background-color: black;">
+      <children>
+         <Label alignment="CENTER" layoutX="165.0" layoutY="88.0" prefHeight="98.0" prefWidth="565.0" text="SELECT YOUR LEVELS" textFill="#00adb5">
+            <font>
+               <Font name="Bauhaus 93" size="64.0" />
+            </font>
+         </Label>
+         <Button fx:id="button_level_1" layoutX="372.0" layoutY="282.0" mnemonicParsing="false" onAction="#button_level_1_action" text="level 1">
+            <font>
+               <Font name="Snap ITC" size="30.0" />
+            </font>
+         </Button>
+         <Button fx:id="button_level_2" layoutX="369.0" layoutY="458.0" mnemonicParsing="false" onAction="#button_level_2_action" text="level 2">
+            <font>
+               <Font name="Snap ITC" size="30.0" />
+            </font>
+         </Button>
+         <Button fx:id="button_level_3" layoutX="369.0" layoutY="626.0" mnemonicParsing="false" onAction="#button_level_3_action" text="level 3">
+            <font>
+               <Font name="Snap ITC" size="30.0" />
+            </font>
+         </Button>
+         <Button fx:id="button_back" layoutX="34.0" layoutY="728.0" mnemonicParsing="false" onAction="#button_back_action" text="Back">
+            <font>
+               <Font name="Snap ITC" size="18.0" />
+            </font>
+         </Button>
+      </children></AnchorPane>
+</Scene>

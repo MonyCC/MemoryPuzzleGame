@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile JavaFX",
+      "type": "shell",
+      "command": "javac",
+      "args": [
+        "--module-path", "javafx_sdk/lib",
+        "--add-modules", "javafx.controls,javafx.fxml",
+        "-cp", "lib/sqlite-jdbc-3.36.0.3.jar",
+        "-d", "out",
+        "src/application/controller/*.java"
+      ],
+      "group": "build"
+    },
+    {
+      "label": "Copy Resources",
+      "type": "shell",
+      "command": "xcopy",
+      "args": [
+        "src\\application\\assets", "out\\application\\assets", "/E", "/I", "/Y"
+      ]
+    },
+    {
+      "label": "Copy FXML",
+      "type": "shell",
+      "command": "xcopy",
+      "args": [
+        "src\\application\\fxml", "out\\application\\fxml", "/E", "/I", "/Y"
+      ]
+    }
+  ]
+}
