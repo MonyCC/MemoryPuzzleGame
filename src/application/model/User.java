@@ -1,4 +1,6 @@
 package application.model;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 public class User {
     private int id;
     private String username;
@@ -48,5 +50,45 @@ public class User {
 
     public void setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
+    }
+
+    //add SHA-256 hash password to secure the password
+    public static String hashPassword(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hashedBytes = md.digest(password.getBytes());
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashedBytes) {
+                sb.append(String.format("%02x", b));  // convert byte to hex
+            }
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("Error hashing password", e);
+        }
+    }
+
+    //check valid register
+   public String validateRegistration(String confirmPassword) {
+        if (username == null || username.length() < 6) {
+            return "Username must be at least 6 characters.";
+        }
+
+        if (passwordHash == null || passwordHash.length() < 6) {
+            return "Password must be at least 6 characters.";
+        }
+
+        if (!passwordHash.matches(".*[!@#$%^&*()_+=\\-{}\\[\\]:;\"'<>,.?/\\\\|~`].*")) {
+            return "Password must contain at least one special character.";
+        }
+
+        if (passwordHash.contains(" ")) {
+            return "Password must not contain spaces.";
+        }
+
+        if (!passwordHash.equals(confirmPassword)) {
+            return "Passwords do not match.";
+        }
+
+        return null; // ✅ Everything is valid
     }
 }

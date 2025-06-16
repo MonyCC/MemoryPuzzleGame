@@ -5,22 +5,22 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OptionController">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OptionController">
     <AnchorPane prefHeight="800.0" prefWidth="871.0">
       <children>
          <ImageView fx:id="Imgaeview_car" fitHeight="266.67" fitWidth="871.0" onDragDetected="#Imgaeview_car_action" onMouseClicked="#Imageview_car_click" pickOnBounds="true">
             <image>
-               <Image url="@../assets/images/orange.jpg" />
+               <Image url="@../assets/images/cars/g%20class.jpg" />
             </image>
          </ImageView>
          <ImageView fx:id="Imageview_animal" fitHeight="266.67" fitWidth="871.0" layoutY="267.0" onDragDetected="#Imageview_animal_action" onMouseClicked="#Imageview_animal_click" pickOnBounds="true">
             <image>
-               <Image url="@../assets/images/shark.jpg" />
+               <Image url="@../assets/images/animals/fish.jpg" />
             </image>
          </ImageView>
          <ImageView fx:id="Imageview_fruit" fitHeight="266.67" fitWidth="871.0" layoutY="533.0" onDragDetected="#Imageview_fruit_action" onMouseClicked="#Imageview_fruit_click" pickOnBounds="true">
             <image>
-               <Image url="@../assets/images/car.jpg" />
+               <Image url="@../assets/images/fruits/grape.jpg" />
             </image>
          </ImageView>
       </children></AnchorPane>

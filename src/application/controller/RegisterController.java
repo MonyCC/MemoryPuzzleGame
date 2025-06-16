@@ -118,31 +118,47 @@ public class RegisterController {
     }
 
     @FXML
-    void register_login(ActionEvent event){
+    void register_login(ActionEvent event) {
+        System.out.println("button register is pressed;");
 
-        System.out.println("button rigister is pressed;");
         String username = Textfield_username_register.getText();
         String password = Passwordfield_password_register.getText();
-        String comfirmPassword = Passwordfield_verify_register.getText();
+        String confirmPassword = Passwordfield_verify_register.getText();
 
-        if(username.isEmpty() || password.isEmpty() ||comfirmPassword.isEmpty()){
-            System.out.println("what");
+        if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+            label_statusResult.setText("Please fill in all fields.");
+            label_statusResult.setStyle("-fx-text-fill: red;");
             return;
         }
 
-        if(!password.equals(comfirmPassword)){return;}
+        // Temporarily use plain password for validation
+        User tempUser = new User(username, password, "/application/assets/images/user_photos/default.png");
 
-        try{
-            String defaultPhotoPath = "/application/assets/images/user_photos/default.png";
-            User user = new User(username, password,defaultPhotoPath);
-            System.out.println(user.getUsername());
-            if (UserDAO.register(user)){
-                label_statusResult.setText("Registered");
-            }else {
-                label_statusResult.setText("Username exists.");
+        String validationError = tempUser.validateRegistration(confirmPassword);
+        System.out.println(validationError);
+        if (validationError != null) {
+            label_statusResult.setText(validationError);
+            label_statusResult.setStyle("-fx-text-fill: red;");
+            return;
+        }
+
+        // ✅ Only hash AFTER validation
+        String hashedPassword = User.hashPassword(password);
+        User finalUser = new User(username, hashedPassword, tempUser.getPhotoPath());
+
+        try {
+            if (UserDAO.register(finalUser)) {
+                label_statusResult.setText("Registered successfully.");
+                label_statusResult.setStyle("-fx-text-fill: green;");
+            } else {
+                label_statusResult.setText("Username already exists.");
+                label_statusResult.setStyle("-fx-text-fill: red;");
             }
         } catch (Exception e) {
-            Label_status_usernameRegister.setText("Error: " + e.getMessage());
+            label_statusResult.setText("Error: " + e.getMessage());
+            label_statusResult.setStyle("-fx-text-fill: red;");
+            e.printStackTrace();
         }
-    }
+    }   
+
 }

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="801.0" prefWidth="871.0">
+      <children>
+         <GridPane layoutX="56.0" layoutY="103.0" prefHeight="619.0" prefWidth="752.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+               <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="90.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <graphic>
+                     <ImageView fitHeight="57.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="1">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@fish.jpg" />
+                        </image></ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@dog.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="2">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@lion.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="3">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@parrot.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="4">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@cat.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.rowIndex="1">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@tiger.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@animalgg.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@elephant.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@penguin.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@jaguar.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.rowIndex="2">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@jaguar.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@animalgg.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@dog.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@cat.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@lion.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.rowIndex="3">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@fish.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@parrot.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@penguin.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@elephant.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="141.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                  <graphic>
+                     <ImageView fitHeight="116.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@tiger.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children>
+         </GridPane>
+         <Button fx:id="button_hint" layoutX="397.0" layoutY="752.0" mnemonicParsing="false" text="Hint" />
+         <Label layoutX="56.0" layoutY="39.0" text="Time:" />
+         <Label fx:id="label_time" layoutX="112.0" layoutY="39.0" text="Time" />
+      </children></AnchorPane>
+</Scene>
