@@ -36,6 +36,7 @@ public class LoginController {
 
     @FXML
     void Button_login_action(ActionEvent event) {
+        System.out.println("button log in pressed");
         try {
             Stage stage = (Stage) Button_login.getScene().getWindow();
             javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/PlayView.fxml")).load();

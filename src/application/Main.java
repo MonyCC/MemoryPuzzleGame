@@ -3,7 +3,6 @@ package application;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -16,14 +15,13 @@ public class Main extends Application {
     stage.setTitle("Memory Puzzle Game - Login");
     stage.setScene(scene);
 
-    // Optional: set icon
-    Image icon = new Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm());
-    stage.getIcons().add(icon);
+    stage.getIcons().add(new javafx.scene.image.Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm()));
 
     stage.show();
     
     }
     public static void main(String[] args) {
+        DatabaseInitializer.initialize();
         launch(args);
     }
 }
