@@ -13,12 +13,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.RegisterController">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.RegisterController">
     <AnchorPane prefHeight="800.0" prefWidth="872.0" style="-fx-background-color: black;">
       <children>
          <ImageView fitHeight="101.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0">
             <image>
-               <Image url="@Puzzle%20Memory%20Gaming%20Logo.png" />
+               <Image url="@../assets/images/logo.png" />
             </image>
          </ImageView>
          <Label alignment="CENTER" layoutX="317.0" layoutY="169.0" text="Register for new player" textFill="#00adb5">
@@ -26,7 +26,7 @@
                <Font name="Bauhaus 93" size="25.0" />
             </font>
          </Label>
-         <Label fx:id="textfield_username" layoutX="160.0" layoutY="235.0" text="Username" textFill="#00adb5">
+         <Label layoutX="160.0" layoutY="235.0" text="Username" textFill="#00adb5">
             <font>
                <Font name="Bauhaus 93" size="24.0" />
             </font>
@@ -36,7 +36,7 @@
                <Font name="Bauhaus 93" size="24.0" />
             </font>
          </Label>
-         <Button fx:id="button_register" layoutX="391.0" layoutY="618.0" mnemonicParsing="false" text="Register">
+         <Button fx:id="button_register" layoutX="391.0" layoutY="618.0" mnemonicParsing="false" onAction="#register_login" text="Register">
             <font>
                <Font name="Bauhaus 93" size="18.0" />
             </font>

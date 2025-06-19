@@ -6,7 +6,7 @@
       "name": "Run JavaFX App",
       "request": "launch",
       "mainClass": "application.Main",
-      "vmArgs": "--module-path \"${workspaceFolder}/javafx_sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+      "vmArgs": "--module-path \"${workspaceFolder}/javafx_sdk/lib\" --add-modules javafx.controls,javafx.fxml,javafx.media"
     }
   ]
 }

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LevelController">
+<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LevelScreenController">
     <AnchorPane prefHeight="801.0" prefWidth="873.0" style="-fx-background-color: black;">
       <children>
          <Label alignment="CENTER" layoutX="165.0" layoutY="88.0" prefHeight="98.0" prefWidth="565.0" text="SELECT YOUR LEVELS" textFill="#00adb5">

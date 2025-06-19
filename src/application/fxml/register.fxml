@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.RegisterController">
+<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.RegisterController">
     <AnchorPane prefHeight="800.0" prefWidth="872.0" style="-fx-background-color: black;">
       <children>
          <ImageView fitHeight="101.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0">

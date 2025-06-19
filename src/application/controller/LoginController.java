@@ -1,10 +1,9 @@
 package application.controller;
 import application.dao.UserDAO;
 import application.model.User;
+import application.util.SoundUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
@@ -59,11 +58,11 @@ public class LoginController {
         if (user != null) {
             Label_status.setText("Login successful.");
             Label_status.setStyle("-fx-text-fill: green;");
-
+            SoundUtil.loopMusic("game-music-loop.mp3");
             // You can save the user for later use in other controllers via Session or Context
             // Then redirect to game screen
             Stage stage = (Stage) Button_login.getScene().getWindow();
-            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/PlayView.fxml")).load();
+            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/HomeView.fxml")).load();
             stage.setScene(scene);
             stage.setTitle("Memory Puzzle Game - Play");
             stage.getIcons().add(new Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm()));

@@ -10,10 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameMechanicController">
+<Scene stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GameMechanicController">
    <root>
-      <AnchorPane id="AnchorPane" prefHeight="871.0" prefWidth="801.0" style="-fx-background-color: white;" stylesheets="@../../../../PuzzleGame/style.css">
+      <AnchorPane id="AnchorPane" prefHeight="871.0" prefWidth="801.0">
          <children>
             <VBox prefHeight="460.0" prefWidth="501.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="150.0">
                <children>
@@ -32,26 +31,31 @@
                   </GridPane>
                </children>
             </VBox>
-            <Label layoutX="36.0" layoutY="67.0" text="Time:">
+            <Label layoutX="28.0" layoutY="68.0" prefHeight="20.0" prefWidth="85.0" text="Time Left :">
                <font>
                   <Font name="Bauhaus 93" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="label_time" layoutX="117.0" layoutY="67.0" text="30s">
+            <Label fx:id="label_time" layoutX="117.0" layoutY="67.0" text="120s">
                <font>
                   <Font name="Bauhaus 93" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="bttn_setting" layoutX="701.0" layoutY="61.0" mnemonicParsing="false" onAction="#bttn_setting" style="-fx-background-color: tran;" text="setting">
+            <Button fx:id="bttn_setting" layoutX="701.0" layoutY="61.0" mnemonicParsing="false" onAction="#bttn_setting" text="setting">
                <font>
                   <Font name="Bauhaus 93" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button_hint" layoutX="371.0" layoutY="772.0" mnemonicParsing="false" onAction="#bttn_again_action" style="-fx-background-color: tran;" text="again">
+            <Button fx:id="button_restart" layoutX="371.0" layoutY="772.0" mnemonicParsing="false" onAction="#button_restart_action" text="again">
                <font>
                   <Font name="Bauhaus 93" size="18.0" />
                </font>
             </Button>
+            <Label fx:id="label_score" layoutX="358.0" layoutY="93.0" text="score">
+               <font>
+                  <Font name="Bauhaus 93" size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </root>

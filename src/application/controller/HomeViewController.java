@@ -4,10 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class PlayController {
+public class HomeViewController {
 
     @FXML
-    private Button Button_history;
+    private Button button_userInfo;
 
     @FXML
     private Button Button_play;
@@ -16,10 +16,10 @@ public class PlayController {
     private Button button_exit;
 
     @FXML
-    void Button_history_action(ActionEvent event) {
+    void Button_userInfo_action(ActionEvent event) {
         try {
-            Stage stage = (Stage) Button_history.getScene().getWindow();
-            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/HistoryView.fxml")).load();
+            Stage stage = (Stage) button_userInfo.getScene().getWindow();
+            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/UserInfo.fxml")).load();
             stage.setScene(scene);
             stage.setTitle("Memory Puzzle Game - History");
             stage.getIcons().add(new javafx.scene.image.Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm()));

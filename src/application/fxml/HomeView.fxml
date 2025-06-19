@@ -6,20 +6,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PlayController">
+<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.HomeViewController">
     <AnchorPane prefHeight="800.0" prefWidth="871.0" style="-fx-background-color: black;">
       <children>
          <Button fx:id="Button_play" layoutX="255.0" layoutY="316.0" mnemonicParsing="false" onAction="#Button_play_action" prefHeight="25.0" prefWidth="336.0" text="Play" textFill="#00adb5">
             <font>
                <Font name="Bauhaus 93" size="27.0" />
             </font>
-         </Button>
+         </Button>  
          <Button fx:id="button_exit" layoutX="254.0" layoutY="375.0" mnemonicParsing="false" onAction="#button_exit_action" prefHeight="23.0" prefWidth="338.0" text="Exit" textFill="RED">
             <font>
                <Font name="Bauhaus 93" size="27.0" />
             </font>
          </Button>
-         <Button fx:id="Button_history" layoutX="847.0" layoutY="3.0" mnemonicParsing="false" onAction="#Button_history_action" text="i">
+         <Button fx:id="Button_userInfo" layoutX="828.0" layoutY="3.0" mnemonicParsing="false" onAction="#Button_userInfo_action" prefHeight="38.0" prefWidth="39.0" text="i">
             <font>
                <Font name="Bauhaus 93" size="12.0" />
             </font>
