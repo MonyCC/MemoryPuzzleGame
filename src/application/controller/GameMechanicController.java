@@ -1,5 +1,6 @@
 package application.controller;
 
+import java.io.IOException;
 import java.util.List;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -7,9 +8,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import application.model.Card;
 import application.util.GameSettings;
@@ -18,11 +21,12 @@ import application.engine.GameEngine;
 public class GameMechanicController {
 
     @FXML private Button bttn_setting;
-    @FXML private Button button_restart;
     @FXML private GridPane container;
     @FXML private Label label_time;
     @FXML private Label label_score;
-
+    @FXML private Label lbl_number_hints;
+    @FXML private Button bttn_use_hint;
+  
     private Timeline timer;
     private int timeLeft = 120;
 
@@ -89,20 +93,30 @@ public class GameMechanicController {
         timer.play();
     }
 
-    @FXML
-    void button_restart_action(ActionEvent event) {
-        if(timer != null) { timer.stop();}
+      @FXML
+    void bttn_use_hint_action(ActionEvent event) {
 
-        // Reset score and time
-        timeLeft = 120;
-        label_score.setText("Score:");
-        label_time.setText("120s");
-
-        initialize();
     }
+    // @FXML
+    // void button_restart_action(ActionEvent event) {
+    //     if(timer != null) { timer.stop();}
+
+    //     // Reset score and time
+    //     timeLeft = 120;
+    //     label_score.setText("Score:");
+    //     label_time.setText("120s");
+
+    //     initialize();
+    // }
 
     @FXML
-    void bttn_setting(ActionEvent event) {
+    void bttn_setting(ActionEvent event) throws IOException {
         // show pause/settings menu
+        Stage stage = (Stage) bttn_setting.getScene().getWindow();
+        javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/OptionView.fxml")).load();
+        stage.setScene(scene);
+        stage.setTitle("Memory Puzzle Game - Play");
+        stage.getIcons().add(new Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm()));
+        stage.show();
     }
 }

@@ -18,6 +18,25 @@ public class LevelScreenController {
 
     @FXML
     private Button button_level_3;
+       
+    @FXML
+    private Button button_level_4;
+
+    @FXML
+    private Button button_level_5;
+
+    @FXML
+    private Button button_level_6;
+
+    @FXML
+    private Button button_level_7;
+
+    @FXML
+    private Button button_level_8;
+
+    @FXML
+    private Button button_level_9;
+
 
     @FXML
     void button_level_1_action(ActionEvent event) {
@@ -39,6 +58,37 @@ public class LevelScreenController {
         GameSettings.selectedLevel = 3;
         loadLevelScene("/application/fxml/Level3.fxml");
     }
+    @FXML
+    void button_level_4_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void button_level_5_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void button_level_6_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void button_level_7_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void button_level_8_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void button_level_9_action(ActionEvent event) {
+
+    }
+
+
     @FXML
     void button_back_action(ActionEvent event) {
         try {

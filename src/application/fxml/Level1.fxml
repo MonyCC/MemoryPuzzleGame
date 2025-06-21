@@ -14,7 +14,7 @@
    <root>
       <AnchorPane id="AnchorPane" prefHeight="871.0" prefWidth="801.0">
          <children>
-            <VBox prefHeight="460.0" prefWidth="501.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="150.0">
+            <VBox layoutX="38.0" layoutY="131.33333333333334" prefHeight="621.0" prefWidth="735.0" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="131.0">
                <children>
                   <GridPane fx:id="container" alignment="CENTER" gridLinesVisible="true" prefHeight="697.0" prefWidth="343.0">
                     <columnConstraints>
@@ -31,31 +31,28 @@
                   </GridPane>
                </children>
             </VBox>
-            <Label layoutX="28.0" layoutY="68.0" prefHeight="20.0" prefWidth="85.0" text="Time Left :">
+            <Label layoutX="31.0" layoutY="41.0" prefHeight="20.0" prefWidth="85.0" text="Time Left :">
                <font>
                   <Font name="Bauhaus 93" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="label_time" layoutX="117.0" layoutY="67.0" text="120s">
+            <Label fx:id="label_time" layoutX="138.0" layoutY="41.0" text="120s">
                <font>
                   <Font name="Bauhaus 93" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="bttn_setting" layoutX="701.0" layoutY="61.0" mnemonicParsing="false" onAction="#bttn_setting" text="setting">
+            <Button fx:id="bttn_setting" layoutX="695.0" layoutY="35.0" mnemonicParsing="false" onAction="#bttn_setting" text="setting">
                <font>
                   <Font name="Bauhaus 93" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button_restart" layoutX="371.0" layoutY="772.0" mnemonicParsing="false" onAction="#button_restart_action" text="again">
-               <font>
-                  <Font name="Bauhaus 93" size="18.0" />
-               </font>
-            </Button>
-            <Label fx:id="label_score" layoutX="358.0" layoutY="93.0" text="score">
+            <Label fx:id="label_score" layoutX="360.0" layoutY="67.0" text="score : 0">
                <font>
                   <Font name="Bauhaus 93" size="18.0" />
                </font>
             </Label>
+            <Button fx:id="bttn_use_hint" layoutX="372.0" layoutY="773.0" mnemonicParsing="false" onAction="#bttn_use_hint_action" text="Use 💡" />
+            <Label fx:id="lbl_number_hints" layoutX="305.0" layoutY="777.0" text="Label" />
          </children>
       </AnchorPane>
    </root>

@@ -1,8 +1,7 @@
 package application.controller;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -24,6 +23,9 @@ public class OptionController {
     @FXML
     private ImageView Imageview_car;
 
+     @FXML
+    private Button bttn_back_home;
+
 
 
    @FXML
@@ -42,6 +44,21 @@ public class OptionController {
     void Imageview_fruit_click(MouseEvent event) {
         GameSettings.selectedCategory = "fruits";
         loadLevelScreen();
+    }
+
+    @FXML
+    void bttn_back_home(ActionEvent event) {
+        try {
+                Stage stage = (Stage) bttn_back_home.getScene().getWindow();
+                javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/HomeView.fxml")).load();
+                stage.setScene(scene);
+                stage.setTitle("Memory Puzzle Game - Home");
+                stage.getIcons().add(new Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm()));
+                stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void loadLevelScreen() {

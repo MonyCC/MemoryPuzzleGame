@@ -59,8 +59,8 @@ public class LoginController {
             Label_status.setText("Login successful.");
             Label_status.setStyle("-fx-text-fill: green;");
             SoundUtil.loopMusic("game-music-loop.mp3");
-            // You can save the user for later use in other controllers via Session or Context
-            // Then redirect to game screen
+
+            //Open HomeView.fxml
             Stage stage = (Stage) Button_login.getScene().getWindow();
             javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/HomeView.fxml")).load();
             stage.setScene(scene);
