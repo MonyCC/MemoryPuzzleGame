@@ -26,7 +26,7 @@
             </font>
          </Button>
          <Button fx:id="bttn_user_info" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#bttn_user_info_action" prefHeight="79.0" prefWidth="103.0" text="account" />
-         <Button fx:id="bttn_setting" layoutX="24.0" layoutY="730.0" mnemonicParsing="false" onAction="#bttn_setting_action" text="help" />
+         <Button fx:id="bttn_help" layoutX="24.0" layoutY="730.0" mnemonicParsing="false" onAction="#bttn_help_action" text="help" />
          <Button fx:id="bttn_pvp" layoutX="268.0" layoutY="400.0" mnemonicParsing="false" onAction="#bttn_pvp_action" prefHeight="51.0" prefWidth="295.0" text="Play with friend" textFill="#00adb5">
             <font>
                <Font name="Bauhaus 93" size="27.0" />

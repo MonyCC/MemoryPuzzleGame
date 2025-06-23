@@ -17,7 +17,8 @@ public class HomeViewController {
     @FXML
     private Button bttn_pvp;
 
-
+    @FXML
+    private Button bttn_help;
     @FXML
     private Button bttn_user_info;
 
@@ -52,6 +53,10 @@ public class HomeViewController {
 
     }
 
+    @FXML
+    void bttn_help_action(ActionEvent event){
+        
+    }
 
 
     @FXML

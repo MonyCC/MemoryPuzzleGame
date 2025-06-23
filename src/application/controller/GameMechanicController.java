@@ -110,10 +110,10 @@ public class GameMechanicController {
     // }
 
     @FXML
-    void bttn_setting(ActionEvent event) throws IOException {
+    void bttn_setting_action(ActionEvent event) throws IOException {
         // show pause/settings menu
         Stage stage = (Stage) bttn_setting.getScene().getWindow();
-        javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/OptionView.fxml")).load();
+        javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/Setting.fxml")).load();
         stage.setScene(scene);
         stage.setTitle("Memory Puzzle Game - Play");
         stage.getIcons().add(new Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm()));
