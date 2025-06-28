@@ -1,9 +1,9 @@
 package application.model;
 
-import java.net.URL;
-
+import application.util.GameSettings;
 import application.util.SoundUtil;
 import javafx.animation.RotateTransition;
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -15,13 +15,11 @@ import javafx.util.Duration;
     private final ImageView back;
     private boolean flipped = false;
     private boolean matched = false;
+    
 
     public Card(Image frontImage) {
         front = new ImageView(frontImage);
-        URL url = getClass().getResource("/application/assets/images/back-card.png");
-        // System.out.println("BACK URL = " + url);
-        back = new ImageView(new Image(url.toExternalForm()));
-        
+        back = new ImageView(new Image(GameSettings.getResourcePath("src/resources/assets/images/back-card.png")));
         setCardSize(front);
         setCardSize(back);
 
@@ -37,8 +35,9 @@ import javafx.util.Duration;
     }
 
     private void setCardSize(ImageView view) {
-        view.setFitWidth(100);
-        view.setFitHeight(100);
+        view.setFitWidth((200)/(GameSettings.rows - 1));
+        System.out.println((200)/(GameSettings.rows - 1));
+        view.setFitHeight((300) / (GameSettings.cols -2));
         view.setPreserveRatio(true);
     }
     public void unflip() {
@@ -58,6 +57,16 @@ import javafx.util.Duration;
     public Image getFrontImage() {
         return front.getImage();
     }
+
+     public Image getImage() {
+        return front.getImage();
+    }
+
+    public void setImage(Image image) {
+        front.setImage(image);
+    }
+
+
      public void setMatched(boolean matched) {
         this.matched = matched;
         if (matched) {
@@ -91,5 +100,21 @@ import javafx.util.Duration;
         });
 
         rotateOut.play();
+    }
+
+     // New toggleImage method - flips card visibility instantly (no animation)
+    public void toggleImage() {
+        if (flipped) {
+            flipped = false;
+            front.setVisible(false);
+            back.setVisible(true);
+        } else {
+            flipped = true;
+            front.setVisible(true);
+            back.setVisible(false);
+        }
+    }
+    public Node getView() {
+        return this;
     }
 }

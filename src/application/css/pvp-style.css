@@ -1,0 +1,50 @@
+/* Background style */
+.pvp-root {
+    -fx-background-color: linear-gradient(to bottom, #1c1c1c, #2d4033);
+    -fx-font-family: "Georgia", serif;
+}
+
+/* Status title */
+.status-label {
+    -fx-text-fill: #00ffb3;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #005249, 3, 0.7, 1, 1);
+}
+
+/* Turn label (e.g. Player 1's Turn) */
+.turn-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Back button style */
+.back-button {
+    -fx-font-size: 20px;
+    -fx-background-color: #444444;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, black, 2, 0.5, 1, 1);
+}
+
+.back-button:hover {
+    -fx-background-color: #666666;
+}
+
+/* Card grid layout */
+.card-grid {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-padding: 15;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/* Timer/progress bar */
+.timer-bar {
+    -fx-accent: #4caf50;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, #003300, 2, 0.4, 0, 1);
+}

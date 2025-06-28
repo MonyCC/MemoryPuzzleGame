@@ -1,0 +1,50 @@
+/* Root pane */
+.home-root {
+    -fx-background-color: transparent;
+}
+
+/* Shared button style */
+.button {
+    -fx-font-family : CooperBlack;
+    -fx-background-color: rgba(27, 41, 24, 0.85); /* Deep jungle green */
+    -fx-text-fill: #d4af37; /* Gold */
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #d4af37;
+    -fx-border-width: 3;
+    -fx-effect: dropshadow(gaussian, black, 5, 0.3, 0, 2);
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: rgba(35, 55, 30, 0.95);
+    -fx-cursor: hand;
+    -fx-border-color: #f0d98c;
+}
+
+/* Exit button variant */
+.exit-button {
+    -fx-background-color: #331111;
+    -fx-text-fill: #ff4444;
+    -fx-border-color: #993333;
+    -fx-border-width: 2;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.exit-button:hover {
+    -fx-background-color: #551111;
+    -fx-cursor: hand;
+}
+
+/* Profile image styling */
+#default_profile_picture {
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);
+    -fx-border-color: #d4af37;
+    -fx-border-width: 4;
+    -fx-border-radius: 10;
+    -fx-padding: 5;
+    -fx-background-radius: 10;
+}

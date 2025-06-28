@@ -1,0 +1,61 @@
+/* Root background */
+.root, .anchor-pane {
+    -fx-background-color: linear-gradient(to bottom, #1a2e1a, #2b4a2b);
+    -fx-background-size: cover;
+    -fx-font-family: "Georgia", "Cambria", serif;
+}
+
+/* Main Victory Text */
+.label {
+    -fx-text-fill: #ccffcc;
+    -fx-effect: dropshadow(gaussian, #0c3d0c, 2, 0.7, 1, 1);
+}
+
+.label[style*="36px"] {
+    -fx-text-fill: #aaffaa;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #008000, 4, 0.5, 2, 2);
+}
+
+/* Score Details */
+#labelScore, #labelBonus, #labelMultiplier, #labelFinalScore {
+    -fx-text-fill: #e6ffe6;
+    -fx-font-size: 18px;
+}
+
+/* Final Score Highlight */
+#labelFinalScore {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e0ffb3;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(#4b8e4b, #2d662d);
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #aaffaa;
+    -fx-border-width: 2px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #0e2e0e, 2, 0.4, 1, 1);
+}
+
+.button:hover {
+    -fx-background-color: #66bb66;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button:pressed {
+    -fx-background-color: #224422;
+    -fx-translate-y: 2;
+}
+
+/* Stars */
+.image-view {
+    -fx-effect: dropshadow(gaussian, gold, 5, 0.8, 1, 1);
+}

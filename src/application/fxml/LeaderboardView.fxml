@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<Scene stylesheets="@../css/leaderboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LeaderboardController">
+   <root>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/leaderboard.css">
+          <VBox alignment="TOP_CENTER" spacing="15" styleClass="leaderboard-root" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+      
+              <Label styleClass="title" text="🏆 Leaderboard" />
+      
+              <TabPane fx:id="tabPane" styleClass="tab-pane">
+                  <tabs>
+                      <Tab text="Top Scores">
+                          <AnchorPane>
+                              <TableView fx:id="tableTopScores" layoutX="20" layoutY="10" prefWidth="760">
+                                  <columns>
+                                      <TableColumn fx:id="colRank1" prefWidth="80" text="Rank" />
+                                      <TableColumn fx:id="colUsername1" prefWidth="300" text="Username" />
+                                      <TableColumn fx:id="colScore" prefWidth="300" text="Score" />
+                                  </columns>
+                              </TableView>
+                          </AnchorPane>
+                      </Tab>
+                      <Tab text="Best Flip Sequence">
+                          <AnchorPane>
+                              <TableView fx:id="tableFlipSequence" layoutX="20" layoutY="10" prefWidth="760">
+                                  <columns>
+                                      <TableColumn fx:id="colRank2" prefWidth="80" text="Rank" />
+                                      <TableColumn fx:id="colUsername2" prefWidth="300" text="Username" />
+                                      <TableColumn fx:id="colSequence" prefWidth="300" text="Flip Sequence" />
+                                  </columns>
+                              </TableView>
+                          </AnchorPane>
+                      </Tab>
+                      <Tab text="Top Win Rate">
+                          <AnchorPane>
+                              <TableView fx:id="tableWinRate" layoutX="20" layoutY="10" prefWidth="760">
+                                  <columns>
+                                      <TableColumn fx:id="colRank3" prefWidth="80" text="Rank" />
+                                      <TableColumn fx:id="colUsername3" prefWidth="300" text="Username" />
+                                      <TableColumn fx:id="colWinRate" prefWidth="300" text="Win Rate (%)" />
+                                  </columns>
+                              </TableView>
+                          </AnchorPane>
+                      </Tab>
+                  </tabs>
+              </TabPane>
+      
+              <Button onAction="#handleBack" styleClass="back-button" text="Back" />
+          </VBox>
+      </AnchorPane>
+   </root>
+</Scene>

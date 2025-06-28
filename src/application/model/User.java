@@ -6,18 +6,39 @@ public class User {
     private String username;
     private String passwordHash;
     private String photoPath;
+    private int coins;
+    private int hints;
+    private int highestScore;
+    private int bestFlipSequence;
+    private int lastLevelCompleted;
 
-    public User(String username, String passwordHash, String photoPath) {
+
+
+    public User(String username , String passwordHash,String photopath){
         this.username = username;
         this.passwordHash = passwordHash;
-        this.photoPath = photoPath;
+        this.photoPath = photopath;
     }
-
     public User(int id, String username, String passwordHash, String photoPath) {
         this.id = id;
         this.username = username;
         this.passwordHash = passwordHash;
         this.photoPath = photoPath;
+    }
+
+     //  Full constructor for stats
+    public User(int id, String username, String passwordHash, String photoPath,
+                int coins, int hintCount,
+                int highestScore, int bestFlipSequence, int lastLevelCompleted ){
+        this.id = id;
+        this.username = username;
+        this.passwordHash = passwordHash;
+        this.photoPath = photoPath;
+        this.highestScore = highestScore;
+        this.bestFlipSequence = bestFlipSequence;
+        this.lastLevelCompleted = lastLevelCompleted;
+        this.coins = coins;
+        this.hints = hintCount;
     }
 
     public int getId() {
@@ -51,6 +72,21 @@ public class User {
     public void setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
     }
+    public int getCoins() { return coins; }
+    public void setCoins(int coins) { this.coins = coins; }
+
+    public int getHints() { return hints; }
+    public void setHints(int hints) { this.hints = hints; }
+
+
+    public int getHighestScore() { return highestScore; }
+    public void setHighestScore(int highestScore) { this.highestScore = highestScore; }
+
+    public int getBestFlipSequence() { return bestFlipSequence; }
+    public void setBestFlipSequence(int bestFlipSequence) { this.bestFlipSequence = bestFlipSequence; }
+
+    public int getLastLevelCompleted() { return lastLevelCompleted; }
+    public void setLastLevelCompleted(int lastLevelCompleted) { this.lastLevelCompleted = lastLevelCompleted; }
 
     //add SHA-256 hash password to secure the password
     public static String hashPassword(String password) {

@@ -1,0 +1,29 @@
+[
+  {
+    "level": 1,
+    "rows": 2,
+    "cols": 3,
+    "timeLimit": 20,
+    "background": "bg1.png",
+    "mechanics": ["flip"],
+    "theme": "fruits"
+  },
+  {
+    "level": 2,
+    "rows": 3,
+    "cols": 4,
+    "timeLimit": 80,
+    "background": "bg2.png",
+    "mechanics": ["flip"],
+    "theme": "fruits"
+  },
+  {
+    "level": 3,
+    "rows": 4,
+    "cols": 4,
+    "timeLimit": 80,
+    "background": "bg3.png",
+    "mechanics": ["flip", "swap"],
+    "theme": "animals"
+  }
+]

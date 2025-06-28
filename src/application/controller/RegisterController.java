@@ -8,7 +8,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import application.model.User;
-
+import application.util.GameSettings;
 import application.dao.UserDAO;
 
 public class RegisterController {
@@ -107,10 +107,10 @@ public class RegisterController {
     void button_back_to_login_action(ActionEvent event) {
         try {
             Stage stage = (Stage) button_back_to_login.getScene().getWindow();
-            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/login.fxml")).load();
+            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource(GameSettings.LOGIN)).load();
             stage.setScene(scene);
             stage.setTitle("Memory Puzzle Game - Login");
-            stage.getIcons().add(new javafx.scene.image.Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm()));
+            stage.getIcons().add(new javafx.scene.image.Image(GameSettings.getLogoPath()));
             stage.show();
         } catch (Exception e) {
              e.printStackTrace();
@@ -132,7 +132,7 @@ public class RegisterController {
         }
 
         // Temporarily use plain password for validation
-        User tempUser = new User(username, password, "/application/assets/images/user_photos/default.png");
+        User tempUser = new User(username, password, "resources/assets/images/user_photos/profile-default.png");
 
         String validationError = tempUser.validateRegistration(confirmPassword);
         System.out.println(validationError);

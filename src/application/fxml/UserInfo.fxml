@@ -7,41 +7,58 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.UserInfoController">
-    <AnchorPane prefHeight="800.0" prefWidth="871.0">
+<Scene stylesheets="@../css/user-info.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.UserInfoController">
+   <StackPane>
       <children>
-         <ImageView fx:id="default_profile" fitHeight="181.0" fitWidth="213.0" layoutX="57.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="890.0" fitWidth="864.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../assets/images/profile-default.png" />
+               <Image url="@../../resources/assets/images/background/home_bg.png" />
             </image>
+            <effect>
+               <BoxBlur />
+            </effect>
          </ImageView>
-         <Button fx:id="bttn_edit_profile" layoutX="175.0" layoutY="228.0" mnemonicParsing="false" onAction="#bttn_edit_profile" text="+" />
-         <Label fx:id="label_username" layoutX="308.0" layoutY="72.0" prefHeight="30.0" prefWidth="205.0" text="Username" />
-         <Label fx:id="label_last_completed_lvl" layoutX="308.0" layoutY="127.0" prefHeight="30.0" prefWidth="205.0" text="Completed Level : 00" />
-         <Label fx:id="label_best_score" layoutX="308.0" layoutY="183.0" prefHeight="30.0" prefWidth="205.0" text="Best Score" />
-         <Label fx:id="label_last_active" layoutX="539.0" layoutY="72.0" prefHeight="30.0" prefWidth="205.0" text="Last seen" />
-         <Label fx:id="label_best_sequence" layoutX="539.0" layoutY="127.0" prefHeight="30.0" prefWidth="205.0" text="best sequence" />
-         <Label fx:id="label_winrate" layoutX="539.0" layoutY="183.0" prefHeight="30.0" prefWidth="205.0" text="winrate" />
-         <Label layoutX="88.0" layoutY="273.0" prefHeight="30.0" prefWidth="205.0" text="stat -score of different level" />
-         <BarChart fx:id="barchart_score" layoutX="175.0" layoutY="303.0" prefHeight="122.0" prefWidth="337.0">
-           <xAxis>
-             <CategoryAxis side="BOTTOM" />
-           </xAxis>
-           <yAxis>
-             <NumberAxis side="LEFT" />
-           </yAxis>
-         </BarChart>
-         <Label layoutX="102.0" layoutY="489.0" prefHeight="19.0" prefWidth="117.0" text="History" />
-         <ScrollPane fx:id="scrollpane_history" layoutX="124.0" layoutY="508.0" prefHeight="178.0" prefWidth="574.0">
-           <content>
-             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-           </content>
-         </ScrollPane>
-         <Button fx:id="bttn_back" layoutX="31.0" layoutY="752.0" mnemonicParsing="false" onAction="#bttn_back_action" text="back" />
-         <Button fx:id="bttn_edit_username" layoutX="462.0" layoutY="74.0" mnemonicParsing="false" onAction="#bttn_edit_username_action" text="🖊" />
-      </children></AnchorPane>
+          <AnchorPane prefHeight="800.0" prefWidth="871.0">
+            <children>
+               <ImageView fx:id="default_profile" fitHeight="181.0" fitWidth="213.0" layoutX="57.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../resources/assets/images/user_photos/default-profile.png.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="bttn_edit_profile" layoutX="175.0" layoutY="228.0" mnemonicParsing="false" onAction="#bttn_edit_profile" text="+" />
+               <Label fx:id="label_username" layoutX="308.0" layoutY="72.0" prefHeight="30.0" prefWidth="205.0" text="Username" />
+               <Label fx:id="label_last_completed_lvl" layoutX="293.0" layoutY="175.0" prefHeight="30.0" prefWidth="205.0" text="Completed Level : 00" />
+               <Label fx:id="label_best_score" layoutX="293.0" layoutY="213.0" prefHeight="30.0" prefWidth="205.0" text="Best Score" />
+               <Label fx:id="label_best_sequence" layoutX="542.0" layoutY="175.0" prefHeight="30.0" prefWidth="205.0" text="best sequence" />
+               <Label fx:id="label_winrate" layoutX="549.0" layoutY="213.0" prefHeight="30.0" prefWidth="205.0" text="winrate" />
+               <Label layoutX="88.0" layoutY="273.0" prefHeight="30.0" prefWidth="265.0" text="stat -score of different level" />
+               <BarChart fx:id="barchart_score" layoutX="118.0" layoutY="344.0" prefHeight="150.0" prefWidth="586.0">
+                 <xAxis>
+                   <CategoryAxis side="BOTTOM" />
+                 </xAxis>
+                 <yAxis>
+                   <NumberAxis side="LEFT" />
+                 </yAxis>
+               </BarChart>
+               <Label layoutX="88.0" layoutY="536.0" prefHeight="19.0" prefWidth="117.0" text="History" />
+               <ScrollPane fx:id="scrollpane_history" layoutX="109.0" layoutY="615.0" prefHeight="178.0" prefWidth="574.0">
+                 <content>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                 </content>
+               </ScrollPane>
+               <Button fx:id="bttn_back" layoutX="33.0" layoutY="793.0" mnemonicParsing="false" onAction="#bttn_back_action" text="back" />
+               <Button fx:id="bttn_edit_username" layoutX="462.0" layoutY="74.0" mnemonicParsing="false" onAction="#bttn_edit_username_action" text="🖊" />
+               <Button fx:id="bttn_back_to_login" layoutX="738.0" layoutY="21.0" mnemonicParsing="false" onAction="#bttn_back_to_login_action" text="Switch Account" />
+               <Label fx:id="label_num_hints" layoutX="533.0" layoutY="130.0" prefHeight="30.0" prefWidth="205.0" text="hint:" />
+               <Label fx:id="label_num_coins" layoutX="293.0" layoutY="130.0" prefHeight="30.0" prefWidth="205.0" text="coin" />
+            </children>
+         </AnchorPane>
+      </children>
+   </StackPane>
 </Scene>

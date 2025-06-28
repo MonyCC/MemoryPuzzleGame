@@ -7,136 +7,151 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.RegisterController">
-    <AnchorPane prefHeight="800.0" prefWidth="872.0" style="-fx-background-color: black;">
+<Scene stylesheets="@../css/login-register.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.RegisterController">
+   <StackPane>
       <children>
-         <ImageView fitHeight="101.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0">
+         <ImageView fitHeight="869.0" fitWidth="891.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../assets/images/logo.png" />
+               <Image url="@../../resources/assets/images/background/login_bg.png" />
             </image>
+            <effect>
+               <BoxBlur />
+            </effect>
          </ImageView>
-         <Label alignment="CENTER" layoutX="317.0" layoutY="169.0" text="Register for new player" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="25.0" />
-            </font>
-         </Label>
-         <Label layoutX="160.0" layoutY="235.0" text="Username" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="24.0" />
-            </font>
-         </Label>
-         <Label fx:id="label_statusResult" layoutX="728.0" layoutY="731.0" text="Status">
-            <font>
-               <Font name="Bauhaus 93" size="24.0" />
-            </font>
-         </Label>
-         <Button fx:id="button_register" layoutX="391.0" layoutY="618.0" mnemonicParsing="false" onAction="#register_login" text="Register">
-            <font>
-               <Font name="Bauhaus 93" size="18.0" />
-            </font>
-         </Button>
-         <Label layoutX="162.0" layoutY="328.0" text="Password" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="24.0" />
-            </font>
-         </Label>
-         <Label layoutX="272.0" layoutY="263.0" prefHeight="27.0" prefWidth="370.0" text="*Must be at least 6 characters" textFill="#eeeeee">
-            <font>
-               <Font name="Bauhaus 93" size="20.0" />
-            </font>
-         </Label>
-         <Label fx:id="Label_status_usernameRegister" layoutX="272.0" layoutY="290.0" prefHeight="28.0" prefWidth="343.0" text="Status">
-            <font>
-               <Font name="Bauhaus 93" size="24.0" />
-            </font>
-         </Label>
-         <Label layoutX="94.0" layoutY="481.0" prefHeight="34.0" prefWidth="171.0" text="Verify Password" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="24.0" />
-            </font>
-         </Label>
-         <Button fx:id="button_back_to_login" layoutX="29.0" layoutY="729.0" mnemonicParsing="false" onAction="#button_back_to_login_action" text="Back to login">
-            <font>
-               <Font name="Bauhaus 93" size="18.0" />
-            </font>
-         </Button>
-         <CheckBox fx:id="Checkbox_show_password" layoutX="632.0" layoutY="487.0" mnemonicParsing="false" onAction="#Checkbox_show_password_action" text="Show">
-            <font>
-               <Font name="Bauhaus 93" size="18.0" />
-            </font>
-         </CheckBox>
-         <TextField fx:id="Textfield_username_register" layoutX="271.0" layoutY="235.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your username">
-            <font>
-               <Font name="Bauhaus 93" size="14.0" />
-            </font>
-         </TextField>
-         <Group layoutX="84.0" layoutY="327.0">
+          <AnchorPane fx:id="root" blendMode="SCREEN" prefHeight="800.0" prefWidth="872.0" style="-fx-background-color: transparent;" styleClass="root" stylesheets="@../css/login-register.css">
             <children>
-               <TextField fx:id="Textfield_password_register" disable="true" layoutX="187.0" layoutY="1.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your password">
+               <ImageView fx:id="root" fitHeight="101.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0">
+                  <image>
+                     <Image url="@../../resources/assets/images/logo.png" />
+                  </image>
+               </ImageView>
+               <Label alignment="CENTER" layoutX="317.0" layoutY="169.0" text="Register for new player" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="25.0" />
+                  </font>
+               </Label>
+               <Label layoutX="158.0" layoutY="304.0" text="Username" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="24.0" />
+                  </font>
+               </Label>
+               <Label fx:id="label_statusResult" layoutX="429.0" layoutY="758.0" text="Status">
+                  <font>
+                     <Font name="Bauhaus 93" size="24.0" />
+                  </font>
+               </Label>
+               <Button fx:id="button_register" layoutX="414.0" layoutY="675.0" mnemonicParsing="false" onAction="#register_login" text="Register">
+                  <font>
+                     <Font name="Bauhaus 93" size="18.0" />
+                  </font>
+               </Button>
+               <Label layoutX="160.0" layoutY="421.0" text="Password" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="24.0" />
+                  </font>
+               </Label>
+               <Label layoutX="292.0" layoutY="342.0" prefHeight="27.0" prefWidth="370.0" text="*Must be at least 6 characters" textFill="#eeeeee">
+                  <font>
+                     <Font name="Bauhaus 93" size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="Label_status_usernameRegister" layoutX="302.0" layoutY="380.0" prefHeight="28.0" prefWidth="343.0" text="Status">
+                  <font>
+                     <Font name="Bauhaus 93" size="24.0" />
+                  </font>
+               </Label>
+               <Label layoutX="104.0" layoutY="576.0" prefHeight="34.0" prefWidth="171.0" text="Verify Password" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="24.0" />
+                  </font>
+               </Label>
+               <Button fx:id="button_back_to_login" layoutX="27.0" layoutY="795.0" mnemonicParsing="false" onAction="#button_back_to_login_action" text="Back to login">
+                  <font>
+                     <Font name="Bauhaus 93" size="18.0" />
+                  </font>
+               </Button>
+               <CheckBox fx:id="Checkbox_show_password" layoutX="662.0" layoutY="422.0" mnemonicParsing="false" onAction="#Checkbox_show_password_action" text="Show">
+                  <font>
+                     <Font name="Bauhaus 93" size="18.0" />
+                  </font>
+               </CheckBox>
+               <TextField fx:id="Textfield_username_register" layoutX="292.0" layoutY="302.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your username" style="-fx-background-color: black;">
                   <font>
                      <Font name="Bauhaus 93" size="14.0" />
                   </font>
                </TextField>
-               <PasswordField fx:id="Passwordfield_password_register" layoutX="187.0" layoutY="1.0" prefHeight="27.0" prefWidth="350.0" promptText="Enter your password">
-                  <font>
-                     <Font name="Bauhaus 93" size="14.0" />
-                  </font>
-               </PasswordField>
-            </children>
-         </Group>
-         <Label alignment="CENTER" layoutX="228.0" layoutY="115.0" text="Welcome new player" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="48.0" />
-            </font>
-         </Label>
-         <Label layoutX="272.0" layoutY="356.0" prefHeight="27.0" prefWidth="370.0" text="*Must be at least 6 characters" textFill="#eeeeee">
-            <font>
-               <Font name="Bauhaus 93" size="20.0" />
-            </font>
-         </Label>
-         <Label fx:id="label_status_passwordRegister" layoutX="272.0" layoutY="439.0" prefHeight="28.0" prefWidth="345.0" text="Status">
-            <font>
-               <Font name="Bauhaus 93" size="24.0" />
-            </font>
-         </Label>
-         <Group>
-            <children>
-               <TextField fx:id="Textfield_verify_register" disable="true" layoutX="271.0" layoutY="484.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your password">
-                  <font>
-                     <Font name="Bauhaus 93" size="14.0" />
-                  </font>
-               </TextField>
-               <VBox layoutX="271.0" layoutY="483.0">
+               <Group layoutX="105.0" layoutY="417.0">
                   <children>
-                     <PasswordField fx:id="Passwordfield_verify_register" prefHeight="27.0" prefWidth="350.0" promptText="Enter your password">
+                     <TextField fx:id="Textfield_password_register" disable="true" layoutX="187.0" layoutY="1.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your password">
+                        <font>
+                           <Font name="Bauhaus 93" size="14.0" />
+                        </font>
+                     </TextField>
+                     <PasswordField fx:id="Passwordfield_password_register" layoutX="187.0" layoutY="1.0" prefHeight="27.0" prefWidth="350.0" promptText="Enter your password" style="-fx-background-color: black;">
                         <font>
                            <Font name="Bauhaus 93" size="14.0" />
                         </font>
                      </PasswordField>
-                     <Label fx:id="label_status_verifyRegister" prefHeight="28.0" prefWidth="349.0" text="Status">
-                        <font>
-                           <Font name="Bauhaus 93" size="24.0" />
-                        </font>
-                     </Label>
                   </children>
-               </VBox>
+               </Group>
+               <Label alignment="CENTER" layoutX="228.0" layoutY="115.0" text="Welcome new player" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="48.0" />
+                  </font>
+               </Label>
+               <Label layoutX="292.0" layoutY="459.0" prefHeight="27.0" prefWidth="370.0" text="*Must be at least 6 characters" textFill="#eeeeee">
+                  <font>
+                     <Font name="Bauhaus 93" size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="label_status_passwordRegister" alignment="CENTER" layoutX="294.0" layoutY="539.0" prefHeight="28.0" prefWidth="345.0" text="Status">
+                  <font>
+                     <Font name="Bauhaus 93" size="24.0" />
+                  </font>
+               </Label>
+               <Group layoutX="21.0" layoutY="93.0">
+                  <children>
+                     <TextField fx:id="Textfield_verify_register" disable="true" layoutX="271.0" layoutY="484.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your password">
+                        <font>
+                           <Font name="Bauhaus 93" size="14.0" />
+                        </font>
+                     </TextField>
+                     <VBox layoutX="271.0" layoutY="483.0">
+                        <children>
+                           <PasswordField fx:id="Passwordfield_verify_register" prefHeight="27.0" prefWidth="350.0" promptText="Enter your password" style="-fx-background-color: black;">
+                              <font>
+                                 <Font name="Bauhaus 93" size="14.0" />
+                              </font>
+                           </PasswordField>
+                           <Label fx:id="label_status_verifyRegister" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="349.0" text="Status">
+                              <font>
+                                 <Font name="Bauhaus 93" size="24.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </VBox>
+                  </children>
+               </Group>
+               <Label layoutX="292.0" layoutY="485.0" prefHeight="27.0" prefWidth="370.0" text="*Must be at least 1 special character" textFill="#eeeeee">
+                  <font>
+                     <Font name="Bauhaus 93" size="20.0" />
+                  </font>
+               </Label>
+               <Label layoutX="292.0" layoutY="512.0" prefHeight="27.0" prefWidth="370.0" text="*Must be no space" textFill="#eeeeee">
+                  <font>
+                     <Font name="Bauhaus 93" size="20.0" />
+                  </font>
+               </Label>
             </children>
-         </Group>
-         <Label layoutX="272.0" layoutY="386.0" prefHeight="27.0" prefWidth="370.0" text="*Must be at least 1 special character" textFill="#eeeeee">
-            <font>
-               <Font name="Bauhaus 93" size="20.0" />
-            </font>
-         </Label>
-         <Label layoutX="272.0" layoutY="412.0" prefHeight="27.0" prefWidth="370.0" text="*Must be no space" textFill="#eeeeee">
-            <font>
-               <Font name="Bauhaus 93" size="20.0" />
-            </font>
-         </Label>
-      </children></AnchorPane>
+         </AnchorPane>
+      </children>
+   </StackPane>
 </Scene>

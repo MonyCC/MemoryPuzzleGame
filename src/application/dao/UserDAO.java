@@ -3,7 +3,7 @@ import application.model.User;
 import java.sql.*;
 
 public class UserDAO {
-    private static final String DB_URL = "jdbc:sqlite:game.db";
+    private static final String DB_URL = "jdbc:sqlite:db/game.db";
 
     public static boolean register(User user) {
         try (Connection conn = DriverManager.getConnection(DB_URL)) {
@@ -31,7 +31,13 @@ public class UserDAO {
                     rs.getInt("id"),
                     rs.getString("username"),
                     rs.getString("password"),
-                    rs.getString("photo_path")
+                    rs.getString("photo_path"),
+                    rs.getInt("coins"),
+                    rs.getInt("hints"),
+                    rs.getInt("last_level_completed"),
+                    rs.getInt("highest_score"),
+                    rs.getInt("best_flip_sequence")
+                    
                 );
             }
         } catch (SQLException e) {
@@ -39,4 +45,41 @@ public class UserDAO {
         }
         return null;
     }
+    public static void updatePhotoPath(int userId, String path) {
+        String sql = "UPDATE users SET photo_path = ? WHERE id = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, path);
+            stmt.setInt(2, userId);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean isUsernameTaken(String username) {
+        String sql = "SELECT id FROM users WHERE username = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
+            return rs.next(); // if found, taken
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static void updateUsername(int userId, String newUsername) {
+        String sql = "UPDATE users SET username = ? WHERE id = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, newUsername);
+            stmt.setInt(2, userId);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

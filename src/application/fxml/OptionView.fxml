@@ -3,32 +3,60 @@
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OptionController">
-    <AnchorPane prefHeight="800.0" prefWidth="871.0">
+   <StackPane fx:id="stackRoot">
       <children>
-         <Label layoutX="318.0" layoutY="104.0" prefHeight="69.0" prefWidth="183.0" text="Please Choose your option" />
-         <ImageView fx:id="Imageview_car" fitHeight="244.0" fitWidth="299.0" layoutX="14.0" layoutY="238.0" onMouseClicked="#Imageview_car_click" pickOnBounds="true">
+         <ImageView fx:id="backgroundImage" fitHeight="871.0" fitWidth="871.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../assets/images/cars/g%20class.jpg" />
+               <Image url="@../../resources/assets/images/background/khmer_artifact_bg.png" />
             </image>
+            <effect>
+               <BoxBlur />
+            </effect>
          </ImageView>
-         <ImageView fx:id="Imageview_animal" fitHeight="250.0" fitWidth="274.0" layoutX="318.0" layoutY="235.0" onMouseClicked="#Imageview_animal_click" pickOnBounds="true">
-            <image>
-               <Image url="@../assets/images/animals/fish.jpg" />
-            </image>
-         </ImageView>
-         <ImageView fx:id="Imageview_fruit" fitHeight="266.0" fitWidth="271.0" layoutX="607.0" layoutY="227.0" onMouseClicked="#Imageview_fruit_click" pickOnBounds="true">
-            <image>
-               <Image url="@../assets/images/fruits/grape.jpg" />
-            </image>
-         </ImageView>
-         <Label layoutX="150.0" layoutY="523.0" prefHeight="17.0" prefWidth="23.0" text="Car" />
-         <Label layoutX="439.0" layoutY="514.0" prefHeight="17.0" prefWidth="23.0" text="Fish" />
-         <Label layoutX="708.0" layoutY="514.0" prefHeight="17.0" prefWidth="36.0" text="Fruit" />
-         <Button fx:id="bttn_back_home" layoutX="31.0" layoutY="746.0" mnemonicParsing="false" onAction="#bttn_back_home" text="back" />
-      </children></AnchorPane>
+          <AnchorPane fx:id="mainContent" prefHeight="800.0" prefWidth="871.0" styleClass="option-root" stylesheets="@../css/option-style.css">
+              <children>
+      
+                  <!-- Title -->
+                  <Label layoutX="253.0" layoutY="45.0" prefHeight="69.0" prefWidth="410.0" styleClass="option-title" text="Choose Your Theme">
+                  <effect>
+                     <Blend mode="SCREEN" />
+                  </effect></Label>
+      
+                  <!-- Left Arrow -->
+                  <Button fx:id="arrowLeft" layoutX="100.0" layoutY="300.0" onAction="#arrowLeftAction" styleClass="arrow-button" text="⮜" />
+      
+                  <!-- Central Image -->
+                  <ImageView fx:id="mainImage" fitHeight="427.0" fitWidth="296.0" layoutX="316.0" layoutY="173.0" onMouseClicked="#categoryImageClick" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../resources/assets/images/poster_options/khmer_artifact_theme.png" />
+                  </image>
+               </ImageView>
+      
+                  <!-- Right Arrow -->
+                  <Button fx:id="arrowRight" layoutX="689.0" layoutY="300.0" onAction="#arrowRightAction" styleClass="arrow-button" text="⮞" />
+      
+                  <!-- Label for option -->
+                  <Label fx:id="labelOptionName" blendMode="SCREEN" layoutX="383.0" layoutY="681.0" prefWidth="150.0" styleClass="option-name" text="Car">
+                  <effect>
+                     <Blend mode="COLOR_DODGE" />
+                  </effect></Label>
+      
+                  <!-- Confirm selection -->
+                  <Button fx:id="bttn_confirm" blendMode="MULTIPLY" layoutX="358.0" layoutY="756.0" onAction="#bttn_confirm_action" prefWidth="200.0" styleClass="confirm-button" text="Choose" />
+      
+                  <!-- Back to home -->
+                  <Button fx:id="bttn_back_home" blendMode="ADD" layoutX="20.0" layoutY="808.0" onAction="#bttn_back_home" styleClass="back-button" text="Back" />
+      
+              </children>
+          </AnchorPane>
+      </children>
+   </StackPane>
 </Scene>

@@ -1,0 +1,92 @@
+[
+  {
+    "level": 1,
+    "rows": 2,
+    "cols": 3,
+    "timeLimit": 20,
+    "background": "bg1.png",
+    "mechanics": ["flip"],
+    "score_add" : 50,
+    "score_punish" : 10
+  },
+  {
+    "level": 2,
+    "rows": 3,
+    "cols": 3,
+    "timeLimit": 50,
+    "background": "bg2.png",
+    "mechanics": ["flip"],
+    "score_add" : 60,
+    "score_punish" : 10
+  },
+  {
+    "level": 3,
+    "rows": 3,
+    "cols": 4,
+    "timeLimit": 60,
+    "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 70,
+    "score_punish" : 10
+  },
+  {
+    "level": 4,
+    "rows": 3,
+    "cols": 4,
+    "timeLimit": 50,
+    "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 80,
+    "score_punish" : 10
+  },
+  {
+    "level": 5,
+    "rows": 4,
+    "cols": 4,
+    "timeLimit": 40,
+    "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 90,
+    "score_punish" : 10
+  },
+  {
+    "level": 6,
+    "rows": 4,
+    "cols": 5,
+    "timeLimit": 30,
+    "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 100,
+    "score_punish" : 10
+  },
+  {
+    "level": 7,
+    "rows": 3,
+    "cols": 4,
+    "timeLimit": 30,
+    "background": "bg3.png",
+    "mechanics": ["flip", "swap"],
+    "score_add" : 120,
+    "score_punish" : 15
+  },
+   {
+    "level": 8,
+    "rows": 4,
+    "cols": 4,
+    "timeLimit": 30,
+    "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 140,
+    "score_punish" : 20
+  },
+   {
+    "level": 9,
+    "rows": 4,
+    "cols": 5,
+    "timeLimit": 30,
+    "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 160,
+    "score_punish" : 20
+  }
+]

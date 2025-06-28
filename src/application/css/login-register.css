@@ -1,0 +1,45 @@
+.root {
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Bauhaus 93";
+}
+
+
+.label {
+    -fx-text-fill: #e0c97f; /* Ancient golden look */
+}
+
+.button {
+    -fx-background-color: #4e342e;
+    -fx-text-fill: #fff8e1;
+    -fx-font-size: 18px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #a1887f;
+}
+
+.button:hover {
+    -fx-background-color: #6d4c41;
+    -fx-cursor: hand;
+}
+
+.text-field,
+.password-field {
+    -fx-text-fill: #e0c97f; /* Ancient golden look */
+    -fx-border-color: #a1887f;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 6 12 6 12;
+}
+
+
+
+#Label_status,
+#label_statusResult,
+#Label_status_usernameRegister,
+#label_status_passwordRegister,
+#label_status_verifyRegister {
+    -fx-text-fill: #ff1500;
+    -fx-font-size: 18px;
+}

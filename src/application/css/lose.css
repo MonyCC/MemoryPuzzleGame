@@ -1,0 +1,39 @@
+/* Root background */
+.root, .anchor-pane {
+    -fx-background-color: linear-gradient(to bottom, #2d1a1a, #3a2626);
+    -fx-background-size: cover;
+    -fx-font-family: "Georgia", "Cambria", serif;
+}
+
+/* Defeat Label */
+#label_lost_status {
+    -fx-text-fill: #ff6666;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #8b0000, 5, 0.8, 2, 2);
+    -fx-font-size: 36px;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(#883333, #661a1a);
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #ff9999;
+    -fx-border-width: 2px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #400000, 2, 0.4, 1, 1);
+}
+
+.button:hover {
+    -fx-background-color: #aa4444;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button:pressed {
+    -fx-background-color: #440000;
+    -fx-translate-y: 2;
+}

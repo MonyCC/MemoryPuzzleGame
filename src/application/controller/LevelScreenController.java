@@ -60,32 +60,44 @@ public class LevelScreenController {
     }
     @FXML
     void button_level_4_action(ActionEvent event) {
-
+        System.out.println("Level 4 button clicked");
+        GameSettings.selectedLevel = 4;
+        loadLevelScene("/application/fxml/Level4.fxml");
     }
 
     @FXML
     void button_level_5_action(ActionEvent event) {
-
+        System.out.println("Level 5 button clicked");
+        GameSettings.selectedLevel = 5;
+        loadLevelScene("/application/fxml/Level5.fxml");
     }
 
     @FXML
     void button_level_6_action(ActionEvent event) {
-
+        System.out.println("Level 6 button clicked");
+        GameSettings.selectedLevel = 6;
+        loadLevelScene("/application/fxml/Level6.fxml");
     }
 
     @FXML
     void button_level_7_action(ActionEvent event) {
-
+        System.out.println("Level 7 button clicked");
+        GameSettings.selectedLevel = 7;
+        loadLevelScene("/application/fxml/Level7.fxml");
     }
 
     @FXML
     void button_level_8_action(ActionEvent event) {
-
+        System.out.println("Level 8 button clicked");
+        GameSettings.selectedLevel = 8;
+        loadLevelScene("/application/fxml/Level8.fxml");
     }
 
     @FXML
     void button_level_9_action(ActionEvent event) {
-
+        System.out.println("Level 9 button clicked");
+        GameSettings.selectedLevel = 3;
+        loadLevelScene("/application/fxml/Level9.fxml");
     }
 
 
@@ -93,10 +105,10 @@ public class LevelScreenController {
     void button_back_action(ActionEvent event) {
         try {
             Stage stage = (Stage) button_back.getScene().getWindow();
-            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource("/application/fxml/OptionView.fxml")).load();
+            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource(GameSettings.OPTION)).load();
             stage.setScene(scene);
             stage.setTitle("Memory Puzzle Game - Options");
-            stage.getIcons().add(new javafx.scene.image.Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm()));
+            stage.getIcons().add(new javafx.scene.image.Image(GameSettings.getLogoPath()));
             stage.show();
         } catch (Exception e) {
              e.printStackTrace();
@@ -108,7 +120,7 @@ public class LevelScreenController {
             javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource(fxmlPath)).load();
             stage.setScene(scene);
             stage.setTitle("Memory Puzzle Game - Level "+ GameSettings.selectedLevel);
-            stage.getIcons().add(new javafx.scene.image.Image(getClass().getResource("/application/assets/images/logo.png").toExternalForm()));
+            stage.getIcons().add(new javafx.scene.image.Image(GameSettings.getLogoPath()));
             stage.show();
         } catch (Exception e) {
              e.printStackTrace();

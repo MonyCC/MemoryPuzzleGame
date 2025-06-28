@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<Scene stylesheets="@../css/win.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.WinScreenController">
+   <root>
+      <AnchorPane prefHeight="466.0" prefWidth="390.0">
+          <VBox alignment="CENTER" layoutX="100" layoutY="50" spacing="20">
+      
+                    <HBox alignment="CENTER" spacing="10">
+                  <ImageView fx:id="star1" fitHeight="50" fitWidth="50">
+                  <image>
+                     <Image url="@../../resources/assets/images/star-filled.png" />
+                  </image>
+               </ImageView>
+                  <ImageView fx:id="star2" fitHeight="50" fitWidth="50">
+                  <image>
+                     <Image url="@../../resources/assets/images/star-filled.png" />
+                  </image>
+               </ImageView>
+                  <ImageView fx:id="star3" fitHeight="50" fitWidth="50">
+                  <image>
+                     <Image url="@../../resources/assets/images/star-filled.png" />
+                  </image>
+               </ImageView>
+              </HBox>
+              <Label style="-fx-font-size: 36px; -fx-text-fill: green;" text="🎉 You Win!" />
+      
+              <Label fx:id="labelScore" style="-fx-font-size: 18px;" text="Total Score: 0" />
+              <Label fx:id="labelBonus" style="-fx-font-size: 18px;" text="Total Bonus: 0" />
+              <Label fx:id="labelMultiplier" style="-fx-font-size: 18px;" text="Time Multiplier: x1.00" />
+              <Label fx:id="labelFinalScore" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Final Score: 0" />
+          </VBox>
+           <Button layoutX="14.0" layoutY="410.0" onAction="#handleBackToMenu" text="Back to Menu" />
+         <Button layoutX="274.0" layoutY="410.0" mnemonicParsing="false" onAction="#nextLevel" text="Next Level" />
+   
+              <Button layoutX="146.0" layoutY="410.0" onAction="#handlePlayAgain" text="Play Again" />
+      </AnchorPane>
+   </root>
+</Scene>
