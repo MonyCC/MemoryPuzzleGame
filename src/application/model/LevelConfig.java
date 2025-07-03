@@ -11,4 +11,5 @@ public class LevelConfig {
     public List<String> mechanics;
     public int score_add;
     public int score_punish;
+    public int coins_gain;
 }

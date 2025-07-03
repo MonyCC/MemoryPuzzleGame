@@ -8,7 +8,7 @@ import application.engine.ScoreManager;
 import application.model.User;
 
 public class GameSettings {
-    public static String selectedCategory ;  // animals, fruits, cars
+    public static String selectedCategory ;  
     public static int selectedLevel = 1;               
     public static int rows;
     public static int cols;
@@ -17,8 +17,10 @@ public class GameSettings {
     public static boolean lastWin;
     public static User loggedInUser;
     public static boolean pvpSwap;
-    public static int score_add = 50;
-    public static int score_punish =10;
+    public static int score_add ;
+    public static int score_punish;
+    public static int coins_gains;
+    public static String PvPOrLevelChoice;
 
     public static Map<Integer, String> LEVEL_SCENES = Map.of(
         1, "/application/fxml/Level1.fxml",
@@ -46,6 +48,9 @@ public class GameSettings {
     public static final String LEADERBOARD = "/application/fxml/LeaderboardView.fxml";
     public static final String PVPOPTION = "/application/fxml/PvPOptionView.fxml";
     public static final String PVPGAME = "/application/fxml/PvPGame.fxml";
+    public static final String SHOP = "/application/fxml/Shop.fxml";
+    // public static final String ONLINE = "/application/fxml/PlayOnline.fxml";
+
      private static String logoPath;
     private static String audioPath;
 
@@ -64,6 +69,10 @@ public class GameSettings {
     }
 
     public static String getResourcePath(String relativeResourcePath) {
+        if (relativeResourcePath.startsWith("file:/")) {
+            return relativeResourcePath; // already a URI
+        }
+
         String path = Paths.get(System.getProperty("user.dir"), relativeResourcePath).toString();
         File file = new File(path);
         if (file.exists()) {
@@ -71,6 +80,7 @@ public class GameSettings {
         }
 
         throw new IllegalArgumentException("Resource not found in classpath or file system: " + relativeResourcePath);
+    
     }
 
 

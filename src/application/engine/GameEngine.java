@@ -19,7 +19,7 @@ import java.util.function.Consumer;
 
 public class GameEngine {
 
-    private int rows, cols , score_add,score_punish ;
+    private int rows, cols  ;
     private String category;
     private List<Card> cards = new ArrayList<>();
     private Map<Card, Node> cardNodeMap;
@@ -43,8 +43,10 @@ public class GameEngine {
         this.cols = config.cols;
         this.category = GameSettings.selectedCategory;
         this.mechanics = config.mechanics;
-        this.score_add = config.score_add;
-        this.score_punish = config.score_punish;
+        GameSettings.score_add = config.score_add;
+        GameSettings.score_punish = config.score_punish;
+        GameSettings.coins_gains = config.coins_gain;
+        System.out.println(config.coins_gain);
         initCards();
     }
 

@@ -78,6 +78,7 @@ public class UserInfoController {
         var user = GameSettings.loggedInUser;
 
         if (user == null) return;
+         default_profile.setImage(new Image(GameSettings.getResourcePath(user.getPhotoPath())));
 
         label_username.setText(user.getUsername());
         label_num_hints.setText("Hints: " + user.getHints());
@@ -92,6 +93,7 @@ public class UserInfoController {
 
         populateBarChart();
         populateGameHistory();
+
     }
 
     @FXML
@@ -127,21 +129,22 @@ public class UserInfoController {
                     return;
                 }
 
-                String newFilename = username + "_photo." + extension;
-                File destFile = new File("src/resources/assets/images/user_photos/" + newFilename);
+                String newFilename = "src/resources/assets/images/user_photos/" + username + "_photo." + extension;
+                
+                File destFile = new File(newFilename);
                 
                 // Copy selected file to project directory
                 Files.copy(selectedFile.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
                 // Update image path (relative for GameSettings)
-                String resourcePath = GameSettings.getResourcePath("src/resources/assets/images/user_photos/" + newFilename);
+                String resourcePath = GameSettings.getResourcePath(newFilename);
 
                 // Set user info
-                GameSettings.loggedInUser.setPhotoPath(resourcePath);
+                GameSettings.loggedInUser.setPhotoPath(newFilename);
                 default_profile.setImage(new Image(resourcePath));
 
                 // Save to DB
-                UserDAO.updatePhotoPath(GameSettings.loggedInUser.getId(), resourcePath);
+                UserDAO.updatePhotoPath(GameSettings.loggedInUser.getId(), newFilename);
             } catch (IOException e) {
                 showAlert("Failed to upload image: " + e.getMessage());
                 e.printStackTrace();

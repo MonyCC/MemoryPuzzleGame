@@ -25,24 +25,24 @@
                <BoxBlur />
             </effect>
          </ImageView>
-          <AnchorPane id="root" fx:id="root" blendMode="ADD" prefHeight="799.0" prefWidth="871.0" style="-fx-background-color: transparent;" styleClass="root" stylesheets="@../css/login-register.css">
+          <AnchorPane id="root" fx:id="root" prefHeight="799.0" prefWidth="871.0" style="-fx-background-color: transparent;" styleClass="root" stylesheets="@../css/login-register.css">
             <children>
-               <Label layoutX="146.0" layoutY="485.0" prefHeight="30.0" prefWidth="113.0" text="Username" textFill="#00adb5">
+               <Label blendMode="SCREEN" layoutX="146.0" layoutY="485.0" prefHeight="30.0" prefWidth="113.0" text="Username" textFill="#00adb5">
                   <font>
                      <Font name="Bauhaus 93" size="25.0" />
                   </font>
                </Label>
-               <Label layoutX="151.0" layoutY="540.0" prefHeight="34.0" prefWidth="103.0" text="Password" textFill="#00adb5">
+               <Label blendMode="SCREEN" layoutX="151.0" layoutY="540.0" prefHeight="34.0" prefWidth="103.0" text="Password" textFill="#00adb5">
                   <font>
                      <Font name="Bauhaus 93" size="24.0" />
                   </font>
                </Label>
-               <Label alignment="CENTER" contentDisplay="CENTER" layoutX="267.0" layoutY="351.0" prefHeight="42.0" prefWidth="297.0" text="LOGIN" textAlignment="CENTER" textFill="#00adb5">
+               <Label alignment="CENTER" blendMode="SCREEN" contentDisplay="CENTER" layoutX="267.0" layoutY="351.0" prefHeight="42.0" prefWidth="297.0" text="LOGIN" textAlignment="CENTER" textFill="#00adb5">
                   <font>
                      <Font name="Bauhaus 93" size="36.0" />
                   </font>
                </Label>
-               <CheckBox fx:id="Checkbox_show_login" layoutX="657.0" layoutY="544.0" mnemonicParsing="false" onAction="#Checkbox_show_login_action" prefHeight="18.0" prefWidth="82.0" text="Show" textFill="#eeeeee">
+               <CheckBox fx:id="Checkbox_show_login" blendMode="SCREEN" layoutX="657.0" layoutY="544.0" mnemonicParsing="false" onAction="#Checkbox_show_login_action" prefHeight="18.0" prefWidth="82.0" text="Show" textFill="#e0c97f">
                   <font>
                      <Font name="Bauhaus 93" size="18.0" />
                   </font>
@@ -62,19 +62,19 @@
                      <Font name="Bauhaus 93" size="14.0" />
                   </font>
                </TextField>
-               <ImageView fitHeight="101.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0">
+               <ImageView blendMode="SCREEN" fitHeight="101.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0">
                   <image>
                      <Image url="@../../resources/assets/images/logo.png" />
                   </image>
                </ImageView>
-               <Label fx:id="Label_status" layoutX="412.0" layoutY="671.0" textFill="#ff2525">
+               <Label fx:id="Label_status" alignment="CENTER" layoutX="440.0" layoutY="667.0" textAlignment="CENTER" textFill="#ff2525">
                   <font>
                      <Font name="Bauhaus 93" size="24.0" />
                   </font>
                </Label>
                <Group layoutX="31.0" layoutY="540.0">
                   <children>
-                     <TextField fx:id="Textfield_password_login" disable="true" layoutX="235.0" layoutY="1.0" prefHeight="25.0" prefWidth="351.0" promptText="Enter your password">
+                     <TextField fx:id="Textfield_password_login" disable="true" layoutX="235.0" layoutY="1.0" prefHeight="25.0" prefWidth="351.0" promptText="Enter your password" style="-fx-background-color: black;">
                         <font>
                            <Font name="Bauhaus 93" size="14.0" />
                         </font>
@@ -86,12 +86,12 @@
                      </PasswordField>
                   </children>
                </Group>
-               <Label alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="256.0" prefHeight="54.0" prefWidth="759.0" text="Memory Puzzle Game" textAlignment="CENTER" textFill="#00adb5">
+               <Label alignment="CENTER" blendMode="SCREEN" contentDisplay="CENTER" layoutX="77.0" layoutY="256.0" prefHeight="54.0" prefWidth="759.0" text="Memory Puzzle Game" textAlignment="CENTER" textFill="#00adb5">
                   <font>
                      <Font name="Bauhaus 93" size="48.0" />
                   </font>
                </Label>
-               <Label layoutX="355.0" layoutY="760.0" text="Don' t have account yet?" textFill="#eeeeee">
+               <Label blendMode="SCREEN" layoutX="355.0" layoutY="760.0" text="Don' t have account yet?" textFill="#eeeeee">
                   <font>
                      <Font name="Bauhaus 93" size="14.0" />
                   </font>

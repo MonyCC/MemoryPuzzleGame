@@ -92,7 +92,7 @@ public class OptionController {
         public void loadLevelScreen() {
             try {
                     Stage stage = (Stage) mainImage.getScene().getWindow();
-                    javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource(GameSettings.LEVELSCREEN)).load();
+                    javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource(GameSettings.PvPOrLevelChoice)).load();
                     stage.setScene(scene);
                     stage.setTitle("Memory Puzzle Game - Level Screen");
                     stage.getIcons().add(new javafx.scene.image.Image(GameSettings.getLogoPath()));

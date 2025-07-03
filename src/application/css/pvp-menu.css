@@ -1,45 +1,49 @@
-/* Root pane gradient (already set in FXML) */
-.anchor-pane {
-    -fx-background-color: linear-gradient(to bottom, #1a1f1f, #304242, #1b2929);
-    -fx-font-family: "Georgia", serif;
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
 }
 
-/* Title label */
-.label {
-    -fx-text-fill: #aef5c4;
-    -fx-font-size: 30px;
-    -fx-effect: dropshadow(gaussian, #003d33, 2, 0.7, 2, 2);
-}
-
-/* PvP mode buttons */
 .mode-button {
-    -fx-background-color: linear-gradient(to bottom, #2e7d32, #1b5e20);
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
     -fx-font-size: 18px;
-    -fx-background-radius: 12;
-    -fx-border-radius: 12;
-    -fx-border-color: #66bb6a;
-    -fx-border-width: 2;
+    -fx-pref-width: 200px;
     -fx-padding: 10 20;
+    -fx-background-color: linear-gradient(to bottom, #3f51b5, #1a237e);
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.3), 5, 0.2, 0, 2);
+    -fx-font-weight: bold;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, #003300, 3, 0.7, 2, 2);
+    -fx-border-color: #7986cb;
+    -fx-border-radius: 12px;
 }
 
 .mode-button:hover {
-    -fx-background-color: #43a047;
-    -fx-scale-x: 1.05;
-    -fx-scale-y: 1.05;
+    -fx-background-color: linear-gradient(to bottom, #5c6bc0, #283593);
+    -fx-effect: dropshadow(gaussian, #ffffff88, 10, 0.5, 0, 3);
 }
 
 .mode-button:pressed {
-    -fx-background-color: #1b5e20;
+    -fx-background-color: #1a237e;
+    -fx-translate-y: 2;
 }
 
-/* Back button styling (already inline in FXML but can override here) */
-.button {
-    -fx-background-color: #424242;
+.label {
     -fx-text-fill: white;
-    -fx-background-radius: 10;
-    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+AnchorPane {
+    -fx-padding: 30;
+}
+
+VBox {
+    -fx-spacing: 15;
+}
+
+/* Optional: Back Button */
+.button:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }

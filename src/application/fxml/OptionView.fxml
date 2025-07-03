@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OptionController">
    <StackPane fx:id="stackRoot">
@@ -25,10 +26,7 @@
               <children>
       
                   <!-- Title -->
-                  <Label layoutX="253.0" layoutY="45.0" prefHeight="69.0" prefWidth="410.0" styleClass="option-title" text="Choose Your Theme">
-                  <effect>
-                     <Blend mode="SCREEN" />
-                  </effect></Label>
+                  <Label layoutX="253.0" layoutY="45.0" prefHeight="69.0" prefWidth="410.0" styleClass="option-title" text="Choose Your Theme" />
       
                   <!-- Left Arrow -->
                   <Button fx:id="arrowLeft" layoutX="100.0" layoutY="300.0" onAction="#arrowLeftAction" styleClass="arrow-button" text="⮜" />
@@ -44,16 +42,19 @@
                   <Button fx:id="arrowRight" layoutX="689.0" layoutY="300.0" onAction="#arrowRightAction" styleClass="arrow-button" text="⮞" />
       
                   <!-- Label for option -->
-                  <Label fx:id="labelOptionName" blendMode="SCREEN" layoutX="383.0" layoutY="681.0" prefWidth="150.0" styleClass="option-name" text="Car">
+                  <Label fx:id="labelOptionName" alignment="CENTER" blendMode="SCREEN" layoutX="441.0" layoutY="656.0" styleClass="option-name" text="car" textAlignment="CENTER">
                   <effect>
                      <Blend mode="COLOR_DODGE" />
-                  </effect></Label>
+                  </effect>
+                  <font>
+                     <Font size="11.0" />
+                  </font></Label>
       
                   <!-- Confirm selection -->
-                  <Button fx:id="bttn_confirm" blendMode="MULTIPLY" layoutX="358.0" layoutY="756.0" onAction="#bttn_confirm_action" prefWidth="200.0" styleClass="confirm-button" text="Choose" />
+                  <Button fx:id="bttn_confirm" layoutX="358.0" layoutY="756.0" onAction="#bttn_confirm_action" prefWidth="200.0" styleClass="confirm-button" text="Choose" />
       
                   <!-- Back to home -->
-                  <Button fx:id="bttn_back_home" blendMode="ADD" layoutX="20.0" layoutY="808.0" onAction="#bttn_back_home" styleClass="back-button" text="Back" />
+                  <Button fx:id="bttn_back_home" blendMode="SRC_ATOP" layoutX="20.0" layoutY="808.0" onAction="#bttn_back_home" styleClass="back-button" text="Back" />
       
               </children>
           </AnchorPane>

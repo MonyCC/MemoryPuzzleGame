@@ -17,9 +17,6 @@ public class RegisterController {
     private CheckBox Checkbox_show_password;
 
     @FXML
-    private Label Label_status_usernameRegister;
-
-    @FXML
     private PasswordField Passwordfield_password_register;
 
     @FXML
@@ -42,9 +39,6 @@ public class RegisterController {
 
     @FXML
     private Label label_statusResult;
-
-    @FXML
-    private Label label_status_passwordRegister;
 
     @FXML
     private Label label_status_verifyRegister;
@@ -132,7 +126,7 @@ public class RegisterController {
         }
 
         // Temporarily use plain password for validation
-        User tempUser = new User(username, password, "resources/assets/images/user_photos/profile-default.png");
+        User tempUser = new User(username, password, "src/resources/assets/images/user_photos/profile-default.png");
 
         String validationError = tempUser.validateRegistration(confirmPassword);
         System.out.println(validationError);

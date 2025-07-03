@@ -45,6 +45,33 @@ public class UserDAO {
         }
         return null;
     }
+
+    public static User UpdateStatus(String username) {
+        try (Connection conn = DriverManager.getConnection(DB_URL)) {
+            String sql = "SELECT * FROM users WHERE username = ? ";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return new User(
+                    rs.getInt("id"),
+                    rs.getString("username"),
+                    rs.getString("password"),
+                    rs.getString("photo_path"),
+                    rs.getInt("coins"),
+                    rs.getInt("hints"),
+                    rs.getInt("last_level_completed"),
+                    rs.getInt("highest_score"),
+                    rs.getInt("best_flip_sequence")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
     public static void updatePhotoPath(int userId, String path) {
         String sql = "UPDATE users SET photo_path = ? WHERE id = ?";
         try (Connection conn = DriverManager.getConnection(DB_URL);
@@ -81,5 +108,79 @@ public class UserDAO {
             e.printStackTrace();
         }
     }
+
+    // Get user's current coin balance
+    public static int getUserCoins(String username) {
+        String sql = "SELECT coins FROM users WHERE username = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) return rs.getInt("coins");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public static boolean updateCoins(String username, int deltaCoins) {
+        String getSql = "SELECT coins FROM users WHERE username = ?";
+        String updateSql = "UPDATE users SET coins = ? WHERE username = ?";
+
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+            PreparedStatement getStmt = conn.prepareStatement(getSql);
+            PreparedStatement updateStmt = conn.prepareStatement(updateSql)) {
+
+            getStmt.setString(1, username);
+            ResultSet rs = getStmt.executeQuery();
+
+            if (rs.next()) {
+                int currentCoins = rs.getInt("coins");
+                int updatedCoins = currentCoins + deltaCoins;
+
+                // Prevent negative coins
+                if (updatedCoins < 0) return false;
+
+                updateStmt.setInt(1, updatedCoins);
+                updateStmt.setString(2, username);
+                return updateStmt.executeUpdate() > 0;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public static boolean updateHints(String username, int deltaHints) {
+        String getSql = "SELECT hints FROM users WHERE username = ?";
+        String updateSql = "UPDATE users SET hints = ? WHERE username = ?";
+
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+            PreparedStatement getStmt = conn.prepareStatement(getSql);
+            PreparedStatement updateStmt = conn.prepareStatement(updateSql)) {
+
+            getStmt.setString(1, username);
+            ResultSet rs = getStmt.executeQuery();
+
+            if (rs.next()) {
+                int currentHints = rs.getInt("hints");
+                int updatedHints = currentHints + deltaHints;
+
+                if (updatedHints < 0) return false;
+
+                updateStmt.setInt(1, updatedHints);
+                updateStmt.setString(2, username);
+                return updateStmt.executeUpdate() > 0;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
 
 }

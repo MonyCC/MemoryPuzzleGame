@@ -149,7 +149,7 @@ public class PvPGameController {
     private void goBack() {
         try {
             Stage stage = (Stage) turnLabel.getScene().getWindow();
-            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource(GameSettings.HOME)).load();
+            javafx.scene.Scene scene = new javafx.fxml.FXMLLoader(getClass().getResource(GameSettings.PVPOPTION)).load();
             stage.setScene(scene);
             stage.setTitle("Memory Puzzle Game - HOME");
             stage.getIcons().add(new javafx.scene.image.Image(GameSettings.getLogoPath()));

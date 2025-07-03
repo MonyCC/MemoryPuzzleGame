@@ -3,24 +3,39 @@
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<Scene stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PvPMenuController">
+<Scene stylesheets="@../css/pvp-menu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PvPMenuController">
    <root>
-      <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);">
-          <VBox alignment="CENTER" layoutX="100.0" layoutY="50.0" prefWidth="600" spacing="20" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
-              <Label style="-fx-font-size: 28px; -fx-text-fill: white; -fx-font-weight: bold;" text="Select PvP Game Mode" />
-      
-              <Button fx:id="mode_4x4" onAction="#handle4x4" styleClass="mode-button" text="4 x 4" />
-              <Button fx:id="mode_4x5" onAction="#handle4x5" styleClass="mode-button" text="4 x 5" />
-              <Button fx:id="mode_5x6" onAction="#handle5x6" styleClass="mode-button" text="5 x 6" />
-              <Button fx:id="mode_6x7" onAction="#handle6x7" styleClass="mode-button" text="6 x 7" />
-              <Button fx:id="mode_6x7_swap" onAction="#handle6x7Swap" styleClass="mode-button" text="6 x 7 (Swap)" />
-      
-              <Button onAction="#handleBack" style="-fx-font-size: 14px; -fx-padding: 8 20; -fx-background-color: #555; -fx-text-fill: white; -fx-background-radius: 10;" text="Back to Menu" />
-          </VBox>
-      </AnchorPane>
+      <StackPane>
+         <children>
+            <ImageView fitHeight="814.0" fitWidth="794.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/assets/images/background/bgPVPMenu.png" />
+               </image>
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </ImageView>
+            <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: transparent;">
+                <VBox alignment="CENTER" layoutX="100.0" layoutY="50.0" prefWidth="600" spacing="20" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                    <Label style="-fx-font-size: 28px; -fx-text-fill: white; -fx-font-weight: bold;" text="Select PvP Game Mode" />
+                </VBox>
+         
+                    <Button blendMode="ADD" layoutX="34.0" layoutY="724.0" onAction="#handleBack" style="-fx-font-size: 14px; -fx-padding: 8 20; -fx-background-color: #555; -fx-text-fill: white; -fx-background-radius: 10;" text="Back to Menu" />
+                 <Button fx:id="mode_6x7_swap" layoutX="300.0" layoutY="572.0" onAction="#handle6x7Swap" styleClass="mode-button" text="6 x 7 (Swap)" />
+                 <Button fx:id="mode_6x7" layoutX="300.0" layoutY="478.0" onAction="#handle6x7" styleClass="mode-button" text="6 x 7" />
+                 <Button fx:id="mode_5x6" layoutX="300.0" layoutY="386.0" onAction="#handle5x6" styleClass="mode-button" text="5 x 6" />
+                 <Button fx:id="mode_4x5" layoutX="300.0" layoutY="292.0" onAction="#handle4x5" styleClass="mode-button" text="4 x 5" />
+         
+                    <Button fx:id="mode_4x4" layoutX="300.0" layoutY="188.0" onAction="#handle4x4" styleClass="mode-button" text="4 x 4" />
+            </AnchorPane>
+         </children>
+      </StackPane>
    </root>
 </Scene>

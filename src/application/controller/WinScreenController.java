@@ -19,6 +19,8 @@ public class WinScreenController {
     @FXML private Label labelBonus;
     @FXML private Label labelMultiplier;
     @FXML private Label labelFinalScore;
+    @FXML private Label base_coins;
+    @FXML private Label final_coins;
 
     @FXML private ImageView star1;
     @FXML private ImageView star2;
@@ -39,12 +41,17 @@ public class WinScreenController {
         System.out.println("score :" + score  +"bonus: " + bonus +" x"+ multiplier + "=> "+ finalScore);
         labelScore.setText("Total Score: " + score);
         labelBonus.setText("Total Bonus: " + bonus);
+
+        System.out.println(GameSettings.coins_gains);
         labelMultiplier.setText(String.format("Time Multiplier: x%.2f", multiplier));
+        base_coins.setText("Coins : " + GameSettings.coins_gains + "💰");
         labelFinalScore.setText("Final Score: " + finalScore);
+        int final_coin = GameSettings.coins_gains + (int)( GameSettings.coins_gains * multiplier);
+        final_coins.setText("Total Coins: " + final_coin + "💰");
 
         
         updateStars(finalScore);
-        coinEarn(10);
+        coinEarn(final_coin);
     }
 
     private void updateStars(int finalScore) {

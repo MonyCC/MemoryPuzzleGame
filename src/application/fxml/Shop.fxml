@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ShopController">
+   <root>
+      <StackPane fx:id="shopRoot" stylesheets="@../css/shop.css">
+          <children>
+              <AnchorPane prefHeight="850.0" prefWidth="850">
+                  <children>
+      
+                      <!-- Title and Coin Display -->
+                      <VBox alignment="TOP_CENTER" spacing="15" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                          <children>
+                              <Label styleClass="shop-title" text="🛒 SHOP" />
+                              <HBox alignment="CENTER" spacing="10">
+                                  <Label styleClass="coin-label" text="💰 Coins:" />
+                                  <Label fx:id="labelCoins" styleClass="coin-value" text="0" />
+                              </HBox>
+            
+                               <!-- Category Navigation -->
+                            <HBox alignment="CENTER" spacing="10">
+                                <Button fx:id="leftButton" onAction="#prevCategory" text="⏪" />
+                                <Label fx:id="categoryTitle" styleClass="category-label" text="Hints" />
+                                <Button fx:id="rightButton" onAction="#nextCategory" text="⏩" />
+                            </HBox>
+                          </children>
+                      </VBox>
+      
+                      <!-- Content Area -->
+                      <ScrollPane fx:id="scrollArea" fitToWidth="true" layoutY="183.33333333333334" prefHeight="567.0" prefWidth="770.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="183.0">
+                          <content>
+                              <VBox fx:id="itemContainer" alignment="TOP_CENTER" spacing="10">
+                                  <padding>
+                                      <Insets bottom="10" left="10" right="10" top="10" />
+                                  </padding>
+                              </VBox>
+                          </content>
+                      </ScrollPane>
+      
+                      <!-- Bottom Button Row -->
+                      <HBox alignment="CENTER" spacing="15" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                          <Button onAction="#showCouponPopup" text="Use Coupon" />
+                          <Button onAction="#handleBack" text="Back" />
+                      </HBox>
+      
+                  </children>
+              </AnchorPane>
+      
+              <!-- POPUP OVERLAY -->
+              <AnchorPane fx:id="popupOverlay" styleClass="popup-overlay" visible="false">
+                  <children>
+                      <VBox alignment="CENTER" layoutX="225" layoutY="200" prefWidth="400" spacing="15" styleClass="popup-box">
+                          <children>
+                              <Label fx:id="popupMessage" styleClass="popup-message" text="" />
+                              <TextField fx:id="couponField" promptText="Enter coupon code" />
+                              <HBox alignment="CENTER" spacing="10">
+                                  <Button onAction="#applyCoupon" text="Apply" />
+                                  <Button onAction="#hidePopup" text="Cancel" />
+                              </HBox>
+                          </children>
+                      </VBox>
+                  </children>
+              </AnchorPane>
+          </children>
+      </StackPane>
+   </root>
+</Scene>

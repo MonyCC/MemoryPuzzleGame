@@ -67,17 +67,17 @@ public class GameViewController {
         setupGrid(config.rows, config.cols);
         timeLeft = config.timeLimit;
 
-        System.out.println(GameSettings.selectedCategory);
-
         gameEngine = new GameEngine(config);
         gameEngine.setCardNodeMap(cardNodeMap);
         List<Card> cards = gameEngine.getCardList();
+
 
         volumeSlider.setValue(SoundUtil.getVolume());
         volumeSlider.valueProperty().addListener((obs, oldVal, newVal) -> {
                 SoundUtil.setVolume(newVal.doubleValue());
         });
 
+        lbl_number_hints.setText("Hints: " + GameSettings.loggedInUser.getHints());
         toggleMusicButton.setText(SoundUtil.isMuted() ? "Music: OFF" : "Music: ON");
 
         int index = 0;
