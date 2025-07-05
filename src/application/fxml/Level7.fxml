@@ -30,41 +30,6 @@
                   <BoxBlur />
                </effect>
             </ImageView>
-            <AnchorPane fx:id="pauseOverlay" prefHeight="830.0" prefWidth="764.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
-               <children>
-                  <VBox fx:id="pauseMenu" alignment="CENTER" layoutX="226.0" layoutY="187.0" prefHeight="484.0" prefWidth="347.0" spacing="15.0" style="-fx-background-color: white; -fx-padding: 20px; -fx-background-radius: 10;">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Label alignment="CENTER" contentDisplay="CENTER" text="Music" textFill="#a18686" />
-                              <Button fx:id="toggleMusicButton" mnemonicParsing="false" onAction="#toggleMusic" text="Music ON" />
-                           </children>
-                           <padding>
-                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                           </padding>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Label alignment="CENTER" text="Volume" textAlignment="CENTER" textFill="#c35959">
-                                 <cursor>
-                                    <Cursor fx:constant="DISAPPEAR" />
-                                 </cursor>
-                              </Label>
-                              <Slider fx:id="volumeSlider" blockIncrement="0.1" max="1.0" value="0.5" />
-                           </children>
-                        </HBox>
-                        <Label text="Paused">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <Button mnemonicParsing="false" onAction="#resumeGame" text="Resume" />
-                        <Button mnemonicParsing="false" onAction="#restart_level" text="Again" />
-                        <Button mnemonicParsing="false" onAction="#back_to_home" text="Back  To Home" />
-                     </children>
-                  </VBox>
-               </children>
-            </AnchorPane>
             <AnchorPane id="AnchorPane" prefHeight="871.0" prefWidth="801.0">
                <children>
                   <VBox layoutX="34.0" layoutY="131.33333333333334" prefHeight="655.0" prefWidth="739.0" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="131.0">
@@ -107,11 +72,41 @@
                   <Button fx:id="bttn_use_hint" layoutX="399.0" layoutY="769.0" mnemonicParsing="false" onAction="#bttn_use_hint_action" text="Use 💡" />
                   <Label fx:id="lbl_number_hints" alignment="CENTER" layoutX="431.0" layoutY="819.0" textAlignment="CENTER" />
                   <Label fx:id="label_bonus_popup" layoutX="462.0" layoutY="58.0" prefHeight="57.0" prefWidth="151.0" styleClass="bonus-popup" text="Label" visible="false" />
-                  <Button fx:id="bttn_setting1" layoutX="26.0" layoutY="805.0" mnemonicParsing="false" onAction="#bttn_setting_action" text="Help">
-                     <font>
-                        <Font name="Bauhaus 93" size="18.0" />
-                     </font>
-                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pauseOverlay" prefHeight="830.0" prefWidth="764.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false">
+               <children>
+                  <VBox fx:id="pauseMenu" alignment="CENTER" layoutX="226.0" layoutY="187.0" prefHeight="484.0" prefWidth="347.0" spacing="15.0" style="-fx-background-color: white; -fx-padding: 20px; -fx-background-radius: 10;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Music" textFill="#a18686" />
+                              <Button fx:id="toggleMusicButton" mnemonicParsing="false" onAction="#toggleMusic" text="Music ON" />
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" text="Volume" textAlignment="CENTER" textFill="#c35959">
+                                 <cursor>
+                                    <Cursor fx:constant="DISAPPEAR" />
+                                 </cursor>
+                              </Label>
+                              <Slider fx:id="volumeSlider" blockIncrement="0.1" max="1.0" value="0.5" />
+                           </children>
+                        </HBox>
+                        <Label text="Paused">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#resumeGame" text="Resume" />
+                        <Button mnemonicParsing="false" onAction="#restart_level" text="Again" />
+                        <Button mnemonicParsing="false" onAction="#back_to_home" text="Back  To Home" />
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
          </children>

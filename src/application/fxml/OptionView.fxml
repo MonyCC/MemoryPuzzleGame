@@ -42,7 +42,7 @@
                   <Button fx:id="arrowRight" layoutX="689.0" layoutY="300.0" onAction="#arrowRightAction" styleClass="arrow-button" text="⮞" />
       
                   <!-- Label for option -->
-                  <Label fx:id="labelOptionName" alignment="CENTER" blendMode="SCREEN" layoutX="441.0" layoutY="656.0" styleClass="option-name" text="car" textAlignment="CENTER">
+                  <Label fx:id="labelOptionName" alignment="CENTER" contentDisplay="CENTER" layoutX="438.0" layoutY="665.0" styleClass="option-name" text="car">
                   <effect>
                      <Blend mode="COLOR_DODGE" />
                   </effect>

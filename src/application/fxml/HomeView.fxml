@@ -28,7 +28,7 @@
                      <Image url="@../../resources/assets/images/user_photos/profile-default.png" />
                   </image>
                </ImageView>
-               <Button fx:id="Button_play" layoutX="303.0" layoutY="442.0" mnemonicParsing="false" onAction="#Button_play_action" prefHeight="51.0" prefWidth="295.0" styleClass="menu-button" text="Play" textFill="#00adb5">
+               <Button fx:id="Button_play" layoutX="303.0" layoutY="460.0" mnemonicParsing="false" onAction="#Button_play_action" prefHeight="51.0" prefWidth="295.0" styleClass="menu-button" text="Play" textFill="#00adb5">
                   <font>
                      <Font name="Bauhaus 93" size="27.0" />
                   </font>
@@ -38,13 +38,12 @@
                      <Font name="Bauhaus 93" size="27.0" />
                   </font>
                </Button>
-               <Button fx:id="bttn_help" layoutX="13.0" layoutY="800.0" mnemonicParsing="false" onAction="#bttn_help_action" prefHeight="50.0" prefWidth="87.0" text="help" />
-               <Button fx:id="bttn_pvp" layoutX="303.0" layoutY="510.0" mnemonicParsing="false" onAction="#bttn_pvp_action" prefHeight="51.0" prefWidth="295.0" styleClass="menu-button" text="Play with friend" textFill="#00adb5">
+               <Button fx:id="bttn_pvp" layoutX="303.0" layoutY="540.0" mnemonicParsing="false" onAction="#bttn_pvp_action" prefHeight="51.0" prefWidth="295.0" styleClass="menu-button" text="Play with friend" textFill="#00adb5">
                   <font>
                      <Font name="Bauhaus 93" size="27.0" />
                   </font>
                </Button>
-               <Button fx:id="bttn_leaderboard" layoutX="306.0" layoutY="720.0" mnemonicParsing="false" onAction="#bttn_leaderboard_action" prefHeight="51.0" prefWidth="289.0" styleClass="menu-button" text="Leaderboard" textFill="#00adb5">
+               <Button fx:id="bttn_leaderboard" layoutX="306.0" layoutY="697.0" mnemonicParsing="false" onAction="#bttn_leaderboard_action" prefHeight="51.0" prefWidth="289.0" styleClass="menu-button" text="Leaderboard" textFill="#00adb5">
                   <font>
                      <Font name="Bauhaus 93" size="27.0" />
                   </font>
@@ -57,12 +56,7 @@
                      <Font name="Cooper Black" size="20.0" />
                   </font>
                </Label>
-               <Button fx:id="bttn_online" layoutX="303.0" layoutY="577.0" mnemonicParsing="false" onAction="#bttn_go_to_online" prefHeight="51.0" prefWidth="295.0" styleClass="menu-button" text="Play Online" textFill="#00adb5">
-                  <font>
-                     <Font name="Bauhaus 93" size="27.0" />
-                  </font>
-               </Button>
-               <Button fx:id="bttn_shop" layoutX="303.0" layoutY="648.0" mnemonicParsing="false" onAction="#bttn_go_to_shop" prefHeight="51.0" prefWidth="295.0" styleClass="menu-button" text="Shop" textFill="#00adb5">
+               <Button fx:id="bttn_shop" layoutX="303.0" layoutY="629.0" mnemonicParsing="false" onAction="#bttn_go_to_shop" prefHeight="51.0" prefWidth="295.0" styleClass="menu-button" text="Shop" textFill="#00adb5">
                   <font>
                      <Font name="Bauhaus 93" size="27.0" />
                   </font>

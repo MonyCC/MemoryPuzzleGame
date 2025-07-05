@@ -102,6 +102,7 @@ public class GameViewController {
 
         gameEngine.setOnGameWon(() -> {
             timer.stop();
+            SoundUtil.play("game_win.wav");
             ScoreManager scoreManager = gameEngine.getScoreManager();
             scoreManager.calculateFinalScoreWithTimeBonus(timeLeft, config.timeLimit);
             GameSettings.lastScore = scoreManager;
@@ -112,6 +113,7 @@ public class GameViewController {
 
         gameEngine.setOnGameLost(() -> {
             timer.stop();
+            SoundUtil.play("game_lose.wav");
             ScoreManager scoreManager = gameEngine.getScoreManager();
             scoreManager.calculateFinalScoreWithTimeBonus(timeLeft, config.timeLimit);
             GameSettings.lastWin = false;
@@ -192,12 +194,29 @@ public class GameViewController {
     }
 
     
-    @FXML
-    void bttn_setting_action(ActionEvent event) throws IOException {
-       if (timer != null) timer.pause();
-        gameEngine.setCanFlip(false);
-        pauseOverlay.setVisible(true);
-    }
+
+            @FXML
+     void bttn_setting_action(ActionEvent event) {
+            try {
+                if (timer != null) timer.pause();
+
+                if (gameEngine != null) {
+                    gameEngine.setCanFlip(false);
+                } else {
+                    System.out.println("Warning: gameEngine is null");
+                }
+
+                if (pauseOverlay != null) {
+                    pauseOverlay.setVisible(true);
+                } else {
+                    System.out.println("Warning: pauseOverlay is null");
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
 
     private void loadWinScreen() {
         try {
@@ -266,10 +285,11 @@ public class GameViewController {
     
     @FXML
     void toggleMusic(ActionEvent event) {
-        boolean isMuted = SoundUtil.isMuted();
-        SoundUtil.setMuted(!isMuted);
-        toggleMusicButton.setText(isMuted ? "Music: ON" : "Music: OFF");
+        boolean newMuteState = !SoundUtil.isMuted();
+        SoundUtil.setMuted(newMuteState);
+        toggleMusicButton.setText(newMuteState ? "Music: OFF" : "Music: ON");
     }
+
 
     void updateDatabase(ScoreManager scoreManager){
         GameDatabaseManager.saveGameResult(

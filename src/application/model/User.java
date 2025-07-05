@@ -5,7 +5,7 @@ public class User {
     private int id;
     private String username;
     private String passwordHash;
-    private String photoPath;
+    private String photoPath; // profile
     private int coins;
     private int hints;
     private int highestScore;

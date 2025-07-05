@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import application.util.GameSettings;
+import application.util.SoundUtil;
 
 import java.io.IOException;
 
@@ -110,6 +111,7 @@ public class WinScreenController {
     @FXML
 void nextLevel(ActionEvent e) {
     int next = GameSettings.selectedLevel + 1;
+    SoundUtil.play("level-up.mp3");
     if (GameSettings.LEVEL_SCENES.containsKey(next)) {
         GameSettings.selectedLevel = next;
         try {

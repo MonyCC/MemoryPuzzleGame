@@ -21,7 +21,7 @@ public class OptionController {
     @FXML private ImageView mainImage;
     @FXML private Label labelOptionName;
 
-    private String[] categories = {"Artifacts", "KhmerArtifacts", "fruits"};
+    private String[] categories = {"Artifacts", "KhmerArtifacts", "fruits","MythicalCreature"};
     private int currentIndex = 0;
 
     @FXML
@@ -63,6 +63,11 @@ public class OptionController {
                 mainImage.setImage(new Image(GameSettings.getResourcePath("src/resources/assets/images/poster_options/fruits_poster.png")));
                 backgroundImage.setImage(new Image(GameSettings.getResourcePath("src/resources/assets/images/background/fruit_bg.png")));
                 break;
+            case "MythicalCreature":
+                mainImage.setImage(new Image(GameSettings.getResourcePath("src/resources/assets/images/poster_options/mythical_creature_poster.png")));
+                backgroundImage.setImage(new Image(GameSettings.getResourcePath("src/resources/assets/images/background/mythical_creature_bg.png")));
+                break;
+            
         }
         labelOptionName.setText(capitalize(categories[currentIndex]));
 

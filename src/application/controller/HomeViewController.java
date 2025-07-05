@@ -20,8 +20,6 @@ public class HomeViewController {
     private Button bttn_pvp;
 
     @FXML
-    private Button bttn_help;
-    @FXML
     private Button bttn_user_info;
 
     @FXML
@@ -80,11 +78,6 @@ public class HomeViewController {
         } catch (Exception e) {
              e.printStackTrace();
         }
-    }
-
-    @FXML
-    void bttn_help_action(ActionEvent event){
-        
     }
 
 

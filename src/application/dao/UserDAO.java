@@ -5,6 +5,7 @@ import java.sql.*;
 public class UserDAO {
     private static final String DB_URL = "jdbc:sqlite:db/game.db";
 
+    //ra
     public static boolean register(User user) {
         try (Connection conn = DriverManager.getConnection(DB_URL)) {
             String sql = "INSERT INTO users (username, password, photo_path) VALUES (?, ?, ?)";

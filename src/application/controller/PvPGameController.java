@@ -37,12 +37,11 @@ public class PvPGameController {
 
     @FXML
     public void initialize() {
-        System.out.println("error");
         int rows = GameSettings.rows;
         int cols = GameSettings.cols;
         boolean swap = GameSettings.pvpSwap;
 
-        engine = new GameEngine(rows, cols, "animals", swap ? List.of("swap") : List.of());
+        engine = new GameEngine(rows, cols, GameSettings.selectedCategory, swap ? List.of("swap") : List.of());
         List<Card> cards = engine.getCardList();
 
         setupGrid(rows, cols, cards);

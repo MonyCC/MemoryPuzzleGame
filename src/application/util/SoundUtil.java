@@ -64,7 +64,7 @@ public class SoundUtil {
                 clip.stop();
             }
         } else {
-            // Optional: Restart music if needed
+            loopMusic("game-music-loop.mp3");
         }
     }
 

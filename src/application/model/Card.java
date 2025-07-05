@@ -36,7 +36,7 @@ import javafx.util.Duration;
 
     private void setCardSize(ImageView view) {
         view.setFitWidth((200)/(GameSettings.rows - 1));
-        System.out.println((200)/(GameSettings.rows - 1));
+        // System.out.println((200)/(GameSettings.rows - 1));
         view.setFitHeight((300) / (GameSettings.cols -2));
         view.setPreserveRatio(true);
     }
