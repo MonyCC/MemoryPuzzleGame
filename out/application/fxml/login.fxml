@@ -7,81 +7,102 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoginController">
-    <AnchorPane prefHeight="799.0" prefWidth="871.0" style="-fx-background-color: Black;">
+   <StackPane>
       <children>
-         <Label layoutX="138.0" layoutY="286.0" prefHeight="30.0" prefWidth="113.0" text="Username" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="25.0" />
-            </font></Label>
-         <Label layoutX="147.0" layoutY="326.0" prefHeight="34.0" prefWidth="103.0" text="Password" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="24.0" />
-            </font></Label>
-         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="276.0" layoutY="192.0" prefHeight="42.0" prefWidth="297.0" text="Login to play" textAlignment="CENTER" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="36.0" />
-            </font>
-         </Label>
-         <CheckBox fx:id="Checkbox_show_login" layoutX="628.0" layoutY="331.0" mnemonicParsing="false" onAction="#Checkbox_show_login_action" prefHeight="18.0" prefWidth="82.0" text="Show" textFill="#eeeeee">
-            <font>
-               <Font name="Bauhaus 93" size="18.0" />
-            </font></CheckBox>
-         <Button fx:id="Button_login" layoutX="261.0" layoutY="422.0" mnemonicParsing="false" onAction="#Button_login_action" prefWidth="350.0" text="Login">
-            <font>
-               <Font name="Bauhaus 93" size="18.0" />
-            </font></Button>
-         <Button fx:id="Button_register_login" layoutX="325.0" layoutY="591.0" mnemonicParsing="false" onAction="#Button_register_login_action" prefHeight="30.0" prefWidth="221.0" text="Register">
-            <font>
-               <Font name="Bauhaus 93" size="18.0" />
-            </font></Button>
-         <TextField fx:id="Textfield_username_login" layoutX="266.0" layoutY="287.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your name" style="-fx-background-color: white;">
-            <font>
-               <Font name="Bauhaus 93" size="14.0" />
-            </font></TextField>
-         <ImageView fitHeight="101.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0">
+         <ImageView fitHeight="869.0" fitWidth="881.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../assets/images/logo.png" />
+               <Image url="@../../resources/assets/images/background/login_bg.png" />
             </image>
+            <effect>
+               <BoxBlur />
+            </effect>
          </ImageView>
-         <Label fx:id="Label_status" layoutX="410.0" layoutY="372.0" text="Status" textFill="#ed4e4e">
-            <font>
-               <Font name="Bauhaus 93" size="24.0" />
-            </font>
-         </Label>
-         <Group layoutX="31.0" layoutY="329.0">
+          <AnchorPane id="root" fx:id="root" prefHeight="799.0" prefWidth="871.0" style="-fx-background-color: transparent;" styleClass="root" stylesheets="@../css/login-register.css">
             <children>
-               <TextField fx:id="Textfield_password_login" disable="true" layoutX="235.0" layoutY="1.0" prefHeight="25.0" prefWidth="351.0" promptText="Enter your password">
+               <Label blendMode="SCREEN" layoutX="146.0" layoutY="485.0" prefHeight="30.0" prefWidth="113.0" text="Username" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="25.0" />
+                  </font>
+               </Label>
+               <Label blendMode="SCREEN" layoutX="151.0" layoutY="540.0" prefHeight="34.0" prefWidth="103.0" text="Password" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="24.0" />
+                  </font>
+               </Label>
+               <Label alignment="CENTER" blendMode="SCREEN" contentDisplay="CENTER" layoutX="267.0" layoutY="351.0" prefHeight="42.0" prefWidth="297.0" text="LOGIN" textAlignment="CENTER" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="36.0" />
+                  </font>
+               </Label>
+               <CheckBox fx:id="Checkbox_show_login" blendMode="SCREEN" layoutX="657.0" layoutY="544.0" mnemonicParsing="false" onAction="#Checkbox_show_login_action" prefHeight="18.0" prefWidth="82.0" text="Show" textFill="#e0c97f">
+                  <font>
+                     <Font name="Bauhaus 93" size="18.0" />
+                  </font>
+               </CheckBox>
+               <Button fx:id="Button_login" layoutX="266.0" layoutY="608.0" mnemonicParsing="false" onAction="#Button_login_action" prefWidth="350.0" text="Login">
+                  <font>
+                     <Font name="Bauhaus 93" size="18.0" />
+                  </font>
+               </Button>
+               <Button fx:id="Button_register_login" layoutX="325.0" layoutY="798.0" mnemonicParsing="false" onAction="#Button_register_login_action" prefHeight="30.0" prefWidth="221.0" text="Register">
+                  <font>
+                     <Font name="Bauhaus 93" size="18.0" />
+                  </font>
+               </Button>
+               <TextField fx:id="Textfield_username_login" layoutX="267.0" layoutY="484.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your name" style="-fx-background-color: black;">
                   <font>
                      <Font name="Bauhaus 93" size="14.0" />
                   </font>
                </TextField>
-               <PasswordField fx:id="Passwordfield_password_login" layoutX="235.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your password">
+               <ImageView blendMode="SCREEN" fitHeight="101.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0">
+                  <image>
+                     <Image url="@../../resources/assets/images/logo.png" />
+                  </image>
+               </ImageView>
+               <Label fx:id="Label_status" alignment="CENTER" layoutX="440.0" layoutY="667.0" textAlignment="CENTER" textFill="#ff2525">
+                  <font>
+                     <Font name="Bauhaus 93" size="24.0" />
+                  </font>
+               </Label>
+               <Group layoutX="31.0" layoutY="540.0">
+                  <children>
+                     <TextField fx:id="Textfield_password_login" disable="true" layoutX="235.0" layoutY="1.0" prefHeight="25.0" prefWidth="351.0" promptText="Enter your password" style="-fx-background-color: black;">
+                        <font>
+                           <Font name="Bauhaus 93" size="14.0" />
+                        </font>
+                     </TextField>
+                     <PasswordField fx:id="Passwordfield_password_login" layoutX="235.0" prefHeight="26.0" prefWidth="350.0" promptText="Enter your password" style="-fx-background-color: black;">
+                        <font>
+                           <Font name="Bauhaus 93" size="14.0" />
+                        </font>
+                     </PasswordField>
+                  </children>
+               </Group>
+               <Label alignment="CENTER" blendMode="SCREEN" contentDisplay="CENTER" layoutX="77.0" layoutY="256.0" prefHeight="54.0" prefWidth="759.0" text="Memory Puzzle Game" textAlignment="CENTER" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="48.0" />
+                  </font>
+               </Label>
+               <Label blendMode="SCREEN" layoutX="355.0" layoutY="760.0" text="Don' t have account yet?" textFill="#eeeeee">
                   <font>
                      <Font name="Bauhaus 93" size="14.0" />
                   </font>
-               </PasswordField>
+               </Label>
+               <Button fx:id="Button_quit" layoutX="14.0" layoutY="798.0" mnemonicParsing="false" onAction="#Button_quit_action" prefHeight="32.0" prefWidth="73.0" text="Quit">
+                  <font>
+                     <Font name="Bauhaus 93" size="18.0" />
+                  </font>
+               </Button>
             </children>
-         </Group>
-         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="61.0" layoutY="115.0" prefHeight="54.0" prefWidth="759.0" text="Welcome to Memory Puzzle Game" textAlignment="CENTER" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="48.0" />
-            </font>
-         </Label>
-         <Label layoutX="358.0" layoutY="562.0" text="Don' t have account yet?" textFill="#eeeeee">
-            <font>
-               <Font name="Bauhaus 93" size="14.0" />
-            </font>
-         </Label>
-         <Button fx:id="Button_quit" layoutX="14.0" layoutY="753.0" mnemonicParsing="false" onAction="#Button_quit_action" prefHeight="32.0" prefWidth="73.0" text="Quit">
-            <font>
-               <Font name="Bauhaus 93" size="18.0" />
-            </font>
-         </Button>
-      </children></AnchorPane>
+         </AnchorPane>
+      </children>
+   </StackPane>
 </Scene>

@@ -1,5 +1,4 @@
 # Ignore build files and VS Code settings
 bin/
-*.class
 .vscode/
 *.log

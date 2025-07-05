@@ -1,0 +1,50 @@
+.option-root {
+    -fx-background-color: transparent;
+}
+
+.option-title {
+    -fx-font-size: 32px;
+    -fx-text-fill: #d4af37;
+    -fx-font-family: "Georgia";
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.option-name {
+    -fx-font-size: 24px;
+    -fx-text-fill: #a4dd77;
+    -fx-font-family: "Georgia";
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.arrow-button {
+    -fx-font-size: 48px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #f5f5dc;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.confirm-button {
+    -fx-background-color: #3e6630;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-border-color: #c0b283;
+    -fx-border-width: 2;
+}
+
+.confirm-button:hover {
+    -fx-background-color: #4e7b3a;
+}
+
+.back-button {
+    -fx-background-color: #331111;
+    -fx-text-fill: #ff5555;
+    -fx-font-size: 16px;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}

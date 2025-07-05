@@ -39,8 +39,10 @@ public class DatabaseInitializer {
             );
         """;
 
-        try (Connection conn = DriverManager.getConnection(DB_URL);
-             Statement stmt = conn.createStatement()) {
+        try {
+            Class.forName("org.sqlite.JDBC"); // load driver manually
+            Connection conn = DriverManager.getConnection(DB_URL);
+            Statement stmt = conn.createStatement();
             stmt.execute(createUserTable);
             stmt.execute(createGameHistoryTable);
             System.out.println("Database initialized.");

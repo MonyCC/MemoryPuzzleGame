@@ -1,0 +1,92 @@
+/* ===================
+   Global Root Styles
+   =================== */
+.root, .stack-pane {
+    -fx-background-color: linear-gradient(to bottom, #1e2f1e, #2c4e2c);
+    -fx-background-size: cover;
+    -fx-font-family: "Segoe UI", "Georgia", serif;
+}
+
+/* ===================
+   Label Styling
+   =================== */
+.label {
+    -fx-text-fill: #ccffcc;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #0f3b0f, 2, 0.5, 1, 1);
+}
+
+/* Timer, Score, Bonus Popup */
+#label_time, #label_score {
+    -fx-text-fill: #aaffaa;
+    -fx-font-size: 20px;
+}
+
+/* Bonus Popup Animation Label */
+.bonus-popup {
+    -fx-background-color: rgba(0, 128, 0, 0.7);
+    -fx-background-radius: 10;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+/* ===================
+   Button Styling
+   =================== */
+.button {
+    -fx-background-color: linear-gradient(#336633, #224422);
+    -fx-background-radius: 10;
+    -fx-border-color: #99cc99;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-text-fill: #e2ffe2;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #0f3b0f, 1, 0.6, 1, 1);
+    -fx-padding: 8 16;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#449944, #2a662a);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.button:pressed {
+    -fx-background-color: #113311;
+    -fx-translate-y: 2;
+}
+
+/* Hint Button */
+#bttn_use_hint {
+    -fx-background-color: #aaffaa;
+    -fx-text-fill: #003300;
+    -fx-font-weight: bold;
+}
+
+/* ===================
+   Pause Menu Overlay
+   =================== */
+#pauseOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+}
+
+#pauseMenu {
+    -fx-background-color: #f4fff4;
+    -fx-background-radius: 12;
+    -fx-padding: 20px;
+    -fx-spacing: 10;
+    -fx-effect: dropshadow(gaussian, #1a3d1a, 4, 0.3, 2, 2);
+}
+
+#pauseMenu Label {
+    -fx-text-fill: #006600;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+#volumeSlider {
+    -fx-pref-width: 120px;
+}

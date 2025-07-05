@@ -1,0 +1,37 @@
+/* levelscreen.css */
+
+.root {
+    -fx-background-size: cover;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.label {
+    -fx-font-family: "Papyrus", "Georgia", serif;
+    -fx-text-fill: #b6fcb6;
+    -fx-effect: dropshadow(gaussian, #003300, 3, 0.6, 2, 2);
+}
+
+.button {
+    -fx-background-color: linear-gradient(#336633, #224422);
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #99cc99;
+    -fx-border-width: 2;
+    -fx-text-fill: #e2ffe2;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #0f3b0f, 2, 0.5, 1, 1);
+    -fx-cursor: hand;
+    -fx-padding: 10 20 10 20;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#449944, #2a662a);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-text-fill: #ffffff;
+}
+
+.button:pressed {
+    -fx-background-color: #113311;
+    -fx-translate-y: 2;
+}

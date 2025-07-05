@@ -1,0 +1,49 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.mode-button {
+    -fx-font-size: 18px;
+    -fx-pref-width: 200px;
+    -fx-padding: 10 20;
+    -fx-background-color: linear-gradient(to bottom, #3f51b5, #1a237e);
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.3), 5, 0.2, 0, 2);
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-color: #7986cb;
+    -fx-border-radius: 12px;
+}
+
+.mode-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #5c6bc0, #283593);
+    -fx-effect: dropshadow(gaussian, #ffffff88, 10, 0.5, 0, 3);
+}
+
+.mode-button:pressed {
+    -fx-background-color: #1a237e;
+    -fx-translate-y: 2;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+AnchorPane {
+    -fx-padding: 30;
+}
+
+VBox {
+    -fx-spacing: 15;
+}
+
+/* Optional: Back Button */
+.button:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

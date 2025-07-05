@@ -3,36 +3,83 @@
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/21.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LevelScreenController">
-    <AnchorPane prefHeight="801.0" prefWidth="873.0" style="-fx-background-color: black;">
+<Scene stylesheets="@../css/levelscreen.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LevelScreenController">
+   <StackPane>
       <children>
-         <Label alignment="CENTER" layoutX="165.0" layoutY="88.0" prefHeight="98.0" prefWidth="565.0" text="SELECT YOUR LEVELS" textFill="#00adb5">
-            <font>
-               <Font name="Bauhaus 93" size="64.0" />
-            </font>
-         </Label>
-         <Button fx:id="button_level_1" layoutX="372.0" layoutY="282.0" mnemonicParsing="false" onAction="#button_level_1_action" text="level 1">
-            <font>
-               <Font name="Snap ITC" size="30.0" />
-            </font>
-         </Button>
-         <Button fx:id="button_level_2" layoutX="369.0" layoutY="458.0" mnemonicParsing="false" onAction="#button_level_2_action" text="level 2">
-            <font>
-               <Font name="Snap ITC" size="30.0" />
-            </font>
-         </Button>
-         <Button fx:id="button_level_3" layoutX="369.0" layoutY="626.0" mnemonicParsing="false" onAction="#button_level_3_action" text="level 3">
-            <font>
-               <Font name="Snap ITC" size="30.0" />
-            </font>
-         </Button>
-         <Button fx:id="button_back" layoutX="34.0" layoutY="728.0" mnemonicParsing="false" onAction="#button_back_action" text="Back">
-            <font>
-               <Font name="Snap ITC" size="18.0" />
-            </font>
-         </Button>
-      </children></AnchorPane>
+         <ImageView blendMode="SRC_ATOP" fitHeight="868.0" fitWidth="920.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../resources/assets/images/background/temple-stone-texture.png" />
+            </image>
+            <effect>
+               <BoxBlur />
+            </effect>
+         </ImageView>
+          <AnchorPane blendMode="SRC_ATOP" prefHeight="801.0" prefWidth="873.0" style="-fx-background-color: transparent;">
+            <children>
+               <Label alignment="CENTER" layoutX="90.0" layoutY="46.0" prefHeight="107.0" prefWidth="716.0" text="SELECT YOUR LEVELS" textFill="#00adb5">
+                  <font>
+                     <Font name="Bauhaus 93" size="29.0" />
+                  </font>
+               </Label>
+               <Button fx:id="button_level_1" layoutX="125.0" layoutY="188.0" mnemonicParsing="false" onAction="#button_level_1_action" prefHeight="120.0" prefWidth="170.0" text="level 1">
+                  <font>
+                     <Font name="Snap ITC" size="30.0" />
+                  </font>
+               </Button>
+               <Button fx:id="button_level_2" layoutX="352.0" layoutY="188.0" mnemonicParsing="false" onAction="#button_level_2_action" prefHeight="120.0" prefWidth="170.0" text="level 2">
+                  <font>
+                     <Font name="Snap ITC" size="30.0" />
+                  </font>
+               </Button>
+               <Button fx:id="button_level_3" layoutX="572.0" layoutY="188.0" mnemonicParsing="false" onAction="#button_level_3_action" prefHeight="120.0" prefWidth="170.0" text="level 3">
+                  <font>
+                     <Font name="Snap ITC" size="30.0" />
+                  </font>
+               </Button>
+               <Button fx:id="button_level_4" layoutX="125.0" layoutY="365.0" mnemonicParsing="false" onAction="#button_level_4_action" prefHeight="120.0" prefWidth="170.0" text="level 4">
+                  <font>
+                     <Font name="Snap ITC" size="30.0" />
+                  </font>
+               </Button>
+               <Button fx:id="button_level_5" layoutX="352.0" layoutY="365.0" mnemonicParsing="false" onAction="#button_level_5_action" prefHeight="120.0" prefWidth="170.0" text="level 5">
+                  <font>
+                     <Font name="Snap ITC" size="30.0" />
+                  </font>
+               </Button>
+               <Button fx:id="button_level_6" layoutX="572.0" layoutY="365.0" mnemonicParsing="false" onAction="#button_level_6_action" prefHeight="120.0" prefWidth="170.0" text="level 6">
+                  <font>
+                     <Font name="Snap ITC" size="30.0" />
+                  </font>
+               </Button>
+               <Button fx:id="button_level_7" layoutX="125.0" layoutY="540.0" mnemonicParsing="false" onAction="#button_level_7_action" prefHeight="120.0" prefWidth="170.0" text="level 7">
+                  <font>
+                     <Font name="Snap ITC" size="30.0" />
+                  </font>
+               </Button>
+               <Button fx:id="button_level_8" layoutX="352.0" layoutY="540.0" mnemonicParsing="false" onAction="#button_level_8_action" prefHeight="120.0" prefWidth="170.0" text="level 8">
+                  <font>
+                     <Font name="Snap ITC" size="30.0" />
+                  </font>
+               </Button>
+               <Button fx:id="button_level_9" layoutX="572.0" layoutY="540.0" mnemonicParsing="false" onAction="#button_level_9_action" prefHeight="120.0" prefWidth="170.0" text="level 9">
+                  <font>
+                     <Font name="Snap ITC" size="30.0" />
+                  </font>
+               </Button>
+               <Button fx:id="button_back" layoutX="14.0" layoutY="795.0" mnemonicParsing="false" onAction="#button_back_action" prefHeight="40.0" prefWidth="100.0" text="Back">
+                  <font>
+                     <Font name="Snap ITC" size="18.0" />
+                  </font>
+               </Button>
+            </children>
+         </AnchorPane>
+      </children>
+   </StackPane>
 </Scene>

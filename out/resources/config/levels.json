@@ -6,24 +6,97 @@
     "timeLimit": 20,
     "background": "bg1.png",
     "mechanics": ["flip"],
-    "theme": "fruits"
+    "score_add" : 50,
+    "score_punish" : 10,
+    "coins_gain": 100
   },
   {
     "level": 2,
     "rows": 3,
-    "cols": 4,
-    "timeLimit": 80,
+    "cols": 3,
+    "timeLimit": 50,
     "background": "bg2.png",
     "mechanics": ["flip"],
-    "theme": "fruits"
+    "score_add" : 60,
+    "score_punish" : 10,
+    "coins_gain": 150
   },
   {
     "level": 3,
-    "rows": 4,
+    "rows": 3,
+    "cols": 4,
+    "timeLimit": 90,
+    "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 70,
+    "score_punish" : 10,
+    "coins_gain": 200
+  },
+  {
+    "level": 4,
+    "rows": 3,
     "cols": 4,
     "timeLimit": 80,
     "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 80,
+    "score_punish" : 10,
+    "coins_gain": 300
+  },
+  {
+    "level": 5,
+    "rows": 4,
+    "cols": 4,
+    "timeLimit": 100,
+    "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 90,
+    "score_punish" : 10,
+    "coins_gain": 400
+  },
+  {
+    "level": 6,
+    "rows": 4,
+    "cols": 5,
+    "timeLimit": 150,
+    "background": "bg3.png",
+    "mechanics": ["flip"],
+    "score_add" : 100,
+    "score_punish" : 10,
+    "coins_gain": 500
+  },
+  {
+    "level": 7,
+    "rows": 3,
+    "cols": 4,
+    "timeLimit": 100,
+    "background": "bg3.png",
     "mechanics": ["flip", "swap"],
-    "theme": "animals"
+    "score_add" : 120,
+    "score_punish" : 15,
+    "coins_gain": 600
+  },
+   {
+    "level": 8,
+    "rows": 4,
+    "cols": 4,
+    "timeLimit": 200,
+    "background": "bg3.png",
+    "mechanics": ["flip","swap"],
+    "score_add" : 140,
+    "score_punish" : 20 ,
+    "coins_gain": 700
+  },
+   {
+    "level": 9,
+    "rows": 4,
+    "cols": 5,
+    "timeLimit": 250,
+    "background": "bg3.png",
+    "mechanics": ["flip","swap"],
+    "score_add" : 160,
+    "score_punish" : 20,
+    "coins_gain": 800
+
   }
 ]

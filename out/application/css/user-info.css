@@ -1,0 +1,105 @@
+/* === GLOBAL LAYOUT === */
+.anchor-pane {
+    -fx-background-color: linear-gradient(to bottom, #0d1f1e, #1b3c3a, #0a1a18);
+    -fx-font-family: "Georgia", serif;
+}
+
+/* === LABELS === */
+.label {
+    -fx-text-fill: #b2ffb2;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #003300, 2, 0.5, 1, 1);
+}
+
+/* Emphasized labels */
+.label-title {
+    -fx-font-size: 20px;
+    -fx-text-fill: #00ff99;
+}
+
+/* === PROFILE IMAGE === */
+.image-view {
+    -fx-effect: dropshadow(gaussian, #003300, 6, 0.6, 0, 1);
+    -fx-border-color: #66bb6a;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+}
+
+/* === BUTTONS === */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #2e7d32, #1b5e20);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 128, 0, 0.6), 2, 0.5, 1, 1);
+}
+
+.button:hover {
+    -fx-background-color: #388e3c;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, #00ff99, 8, 0.3, 0, 0);
+}
+
+/* Icon buttons */
+#bttn_edit_profile, #bttn_edit_username {
+    -fx-font-size: 18px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #a5d6a7;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Navigation buttons */
+#bttn_back, #bttn_back_to_login {
+    -fx-background-color: #424242;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* === CHART STYLING === */
+.bar-chart {
+    -fx-background-color: #e8f5e9;
+    -fx-border-color: #1b5e20;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-title, .chart-legend {
+    -fx-text-fill: #a5d6a7;
+}
+
+.default-color0.chart-bar {
+    -fx-bar-fill: #66bb6a;
+}
+
+/* === HISTORY PANEL === */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: #4caf50;
+    -fx-border-radius: 10;
+}
+
+/* Style for each history entry (if added as VBox or HBox inside the ScrollPane) */
+.history-entry {
+    -fx-background-color: rgba(50, 75, 50, 0.85);
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-margin: 5 0 5 0;
+    -fx-effect: dropshadow(gaussian, #0a3d2c, 4, 0.3, 1, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* Optional animation on hover */
+.history-entry:hover {
+    -fx-background-color: #388e3c;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-cursor: hand;
+}
