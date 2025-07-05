@@ -4,9 +4,10 @@ A Game where you have to match all the pairs of cards before the time runs  and 
 built with JavaFX, FXML, CSS, and SQLite with mvc architecture
 
 ##To Run This Game
-<pre> ```bash java --module-path javafx_sdk/lib --add-modules javafx.controls,javafx.fxml,javafx.media `
+**Run on Terminal**
+<pre>java --module-path javafx_sdk/lib --add-modules javafx.controls,javafx.fxml,javafx.media `
 -cp "out;lib/sqlite-jdbc-3.50.1.0.jar;lib/gson-2.10.1.jar" `
-application.Main``` </pre>
+application.Main </pre>
 
 **or Click run or F5 **
 
