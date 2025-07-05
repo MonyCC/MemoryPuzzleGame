@@ -3,6 +3,13 @@
 A Game where you have to match all the pairs of cards before the time runs  and each level has a different grid size and difficulty.
 built with JavaFX, FXML, CSS, and SQLite with mvc architecture
 
+##To Run This Game
+<pre> ```bash java --module-path javafx_sdk/lib --add-modules javafx.controls,javafx.fxml,javafx.media `
+-cp "out;lib/sqlite-jdbc-3.50.1.0.jar;lib/gson-2.10.1.jar" `
+application.Main``` </pre>
+
+**or Click run or F5 **
+
 
 ## 🎮 Features
 
@@ -65,6 +72,46 @@ built with JavaFX, FXML, CSS, and SQLite with mvc architecture
 - **Maven/Gradle** (optional) — Dependency management
 
 ---
+## 🖼️ UI 
+
+## Authentication Screen
+![LOGIN Screen](ReadmeResource/Login.png)
+![REGISTER Screen](ReadmeResource/Register.png)
+
+### Home Screen
+![Home Screen](ReadmeResource/Home.png)
+
+### Profile
+![Profile Screen](ReadmeResource/ProfileAcc.png)
+
+### Shop
+![Shop Screen](ReadmeResource/Shop.png)
+
+### Leaderboard
+![Leaderboard Screen](ReadmeResource/Leaderboard.png)
+
+### Option Screen
+![Option Mythical creature Screen](ReadmeResource/Mythical.png)
+![Option Fruits Screen](ReadmeResource/Fruit.png)
+![Option Artifacts Screen](ReadmeResource/OptionAr.png)
+![Option Khmer Artifacts Screen](ReadmeResource/Artifact.png)
+
+### Level Screen
+![Level Screen](ReadmeResource/LevelScreen.png)
+
+### Game Play
+![Game Screen](ReadmeResource/Play.png)
+![Setting Screen](ReadmeResource/setting.png)
+
+### Win or Lose
+![Win Screen](ReadmeResource/Win.png)
+![Lose Screen](ReadmeResource/Lost.png)
+
+### PVP or Play with friends (offline)
+![PVP OPTION Screen](ReadmeResource/OptioninPvp.png)
+![PVP Screen](ReadmeResource/PvpPlay.png)
+
+
 
 
 
