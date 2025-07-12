@@ -70,7 +70,6 @@ application.Main </pre>
 - **CSS** — Styling and animations
 - **SQLite** — Data persistence
 - **GSON** — Level configurations
-- **Maven/Gradle** (optional) — Dependency management
 
 ---
 ## 🖼️ UI 
